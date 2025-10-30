@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fundraiser &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+        body {
+            font-family: Lato, sans-serif;
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+
+
+
+
+
+
+
+
+
+
+        /* Mobile Menu Fixes - Add this to your existing CSS */
+
+        @media (max-width: 768px) {
+
+            /* Make nav container scrollable */
+            .vf-nav-container {
+                max-height: 70vh;
+                /* Limit height to 70% of viewport */
+                overflow-y: auto;
+                /* Enable vertical scrolling */
+                overflow-x: hidden;
+                /* Hide horizontal overflow */
+            }
+
+            /* Fix dropdown positioning in mobile */
+            .vf-nav-menu .has-dropdown {
+                position: relative;
+            }
+
+            .vf-submenu {
+                position: static !important;
+                /* Change from absolute to static */
+                display: none;
+                background-color: rgba(116, 97, 117, 0.9) !important;
+                border-radius: 10px;
+                margin: 5px 0 5px 15px;
+                /* Add left margin for indentation */
+                min-width: auto;
+                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Show submenu when parent is clicked/hovered */
+            .vf-nav-menu .has-dropdown:hover .vf-submenu,
+            .vf-nav-menu .has-dropdown.active .vf-submenu {
+                display: block;
+            }
+
+            /* Style submenu items */
+            .vf-submenu li a {
+                padding: 8px 15px;
+                font-size: 14px;
+                border-radius: 8px;
+                margin: 2px 5px;
+            }
+
+            /* Add click handler for mobile dropdowns */
+
+
+            .vf-nav-menu .has-dropdown.active>a::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .llo {
+                height: 50px !important;
+            }
+
+        }
+
+
+        .site-footer {
+            padding: 8em 0 0 0 !important;
+            background-color: #8e728fde !important;
+        }
+
+        .vf-footer {
+            width: 100vw;
+            /* position: fixed; */
+
+        }
+
+        .vf-footer div {
+            background-color: #676678;
+            margin: -5px 0px 0px 0px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        svg {
+            width: 100%;
+        }
+
+        .vf-arrow {
+            stroke-width: 0.3px;
+            stroke: #676678;
+        }
+
+        .vf-topball {
+            animation: vf-ball 1.5s ease-in-out infinite alternate;
+            animation-delay: 0.3s;
+            cursor: pointer;
+        }
+
+        .vf-wave {
+            animation: vf-wave 3s linear infinite;
+            fill: #746175;
+        }
+
+        .vf-drop {
+            fill: transparent;
+            animation: vf-drop 5s ease infinite normal;
+            stroke: #676678;
+            stroke-width: 0.5;
+            opacity: 0.6;
+            transform: translateY(80%);
+        }
+
+        .vf-drop1 {
+            transform-origin: 20px 3px;
+        }
+
+        .vf-drop2 {
+            animation-delay: 3s;
+            animation-duration: 3s;
+            transform-origin: 25px 3px;
+        }
+
+        .vf-drop3 {
+            animation-delay: -2s;
+            animation-duration: 3.4s;
+            transform-origin: 16px 3px;
+        }
+
+        .vf-gooeff {
+            filter: url(#vf-goo);
+        }
+
+        #vf-wave2 {
+            animation-duration: 5s;
+            animation-direction: reverse;
+            opacity: 0.6;
+        }
+
+        #vf-wave3 {
+            animation-duration: 7s;
+            opacity: 0.3;
+        }
+
+        @keyframes vf-drop {
+            0% {
+                transform: translateY(80%);
+                opacity: 0.6;
+            }
+
+            80% {
+                transform: translateY(80%);
+                opacity: 0.6;
+            }
+
+            90% {
+                transform: translateY(10%);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(0%) scale(1.5);
+                stroke-width: 0.2;
+                opacity: 0;
+            }
+        }
+
+        @keyframes vf-wave {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes vf-ball {
+            to {
+                transform: translateY(20%);
+            }
+        }
+
+        .vf-footer {
+            width: 100vw;
+            /* position: fixed; */
+
+        }
+
+        .vf-footer div {
+            background-color: #676678;
+            margin: -5px 0px 0px 0px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        svg {
+            width: 100%;
+        }
+
+        .vf-arrow {
+            stroke-width: 0.3px;
+            stroke: #676678;
+        }
+
+        .vf-topball {
+            animation: vf-ball 1.5s ease-in-out infinite alternate;
+            animation-delay: 0.3s;
+            cursor: pointer;
+        }
+
+        .vf-wave {
+            animation: vf-wave 3s linear infinite;
+            fill: #746175;
+        }
+
+        .vf-drop {
+            fill: transparent;
+            animation: vf-drop 5s ease infinite normal;
+            stroke: #676678;
+            stroke-width: 0.5;
+            opacity: 0.6;
+            transform: translateY(80%);
+        }
+
+        .vf-drop1 {
+            transform-origin: 20px 3px;
+        }
+
+        .vf-drop2 {
+            animation-delay: 3s;
+            animation-duration: 3s;
+            transform-origin: 25px 3px;
+        }
+
+        .vf-drop3 {
+            animation-delay: -2s;
+            animation-duration: 3.4s;
+            transform-origin: 16px 3px;
+        }
+
+        .vf-gooeff {
+            filter: url(#vf-goo);
+        }
+
+        #vf-wave2 {
+            animation-duration: 5s;
+            animation-direction: reverse;
+            opacity: 0.6;
+        }
+
+        #vf-wave3 {
+            animation-duration: 7s;
+            opacity: 0.3;
+        }
+
+        @keyframes vf-drop {
+            0% {
+                transform: translateY(80%);
+                opacity: 0.6;
+            }
+
+            80% {
+                transform: translateY(80%);
+                opacity: 0.6;
+            }
+
+            90% {
+                transform: translateY(10%);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(0%) scale(1.5);
+                stroke-width: 0.2;
+                opacity: 0;
+            }
+        }
+
+        @keyframes vf-wave {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes vf-ball {
+            to {
+                transform: translateY(20%);
+            }
+        }
+
+        @media screen and (min-device-width: 300px) and (max-device-width: 400px) {
+            .vf-main-header-content {
+                /*flex-wrap: nowrap ;*/
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .vf-top-right {
+                display: none !important;
+            }
+
+            .vf-contact-info {
+                display: inline-block !important;
+
+                gap: 8px;
+                color: white;
+            }
+
+            .vf-contact-info {
+                display: inline-block !important;
+                gap: 30px;
+            }
+
+            .vf-contact-info span {
+                display: inline-block !important;
+                align-items: center;
+                gap: 8px;
+                color: white;
+            }
+
+            .shape3 {
+                margin-top: -130px !important;
+
+            }
+
+            h1 {
+                font-weight: 500 !important;
+                font-size: 3rem !important;
+                font-family: "Mansalva", cursive !important;
+            }
+
+            .shape2 {
+                margin-top: -12px !important;
+
+            }
+
+            .shape {
+                position: absolute;
+                margin-top: -1px !important;
+
+            }
+
+            .vf-header-actions {
+                order: 2;
+                gap: 1px !important;
+            }
+
+            .vf-nav-container {
+                order: 4;
+                width: 100%;
+                border-radius: 15px;
+                display: none;
+                background: #746175;
+                padding: 10px;
+                margin-top: 5px;
+                position: relative;
+                /* make it stay below */
+                z-index: 999;
+            }
+
+            .vf-main-header-content {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .vf-nav-container.vf-active {
+                display: block;
+            }
+
+            .site-footer .footer-heading {
+
+                margin-top: 50px !important;
+            }
+        }
+
+        /* Vasistha Foundation Header Styles - Unique namespace to avoid conflicts */
+        .vf-header-wrapper {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+        }
+
+        .vf-header-wrapper * {
+            box-sizing: border-box;
+        }
+
+        /* Top Header Bar */
+        .vf-top-header {
+            background: #676678;
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            width: 100%;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .vf-top-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .vf-contact-info {
+            display: flex;
+            gap: 30px;
+        }
+
+        .vf-contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+        }
+
+        .vf-contact-info i {
+            font-size: 16px;
+        }
+
+        .vf-top-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .vf-currency-selector,
+        .vf-language-selector {
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 5px;
+            outline: none;
+        }
+
+        .vf-currency-selector option,
+        .vf-language-selector option {
+            background: #2c5530;
+            color: white;
+        }
+
+        .vf-social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .vf-social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 5px;
+        }
+
+        .vf-social-links a:hover {
+            color: #ffc107;
+        }
+
+        /* Main Header */
+        .vf-main-header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1000;
+            width: 100%;
+            transition: all 0.3s ease;
+
+        }
+
+        /* Sticky Header Styles */
+        .vf-main-header.vf-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            animation: vfSlideDown 0.3s ease;
+        }
+
+        @keyframes vfSlideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Sticky header adjustments */
+        .vf-main-header.vf-sticky .vf-main-header-content {
+            padding: 10px 20px;
+        }
+
+        .vf-main-header.vf-sticky .vf-logo-text {
+            font-size: 18px;
+        }
+
+        .vf-main-header.vf-sticky .vf-nav-menu a {
+            padding: 10px 14px;
+        }
+
+        .vf-main-header.vf-sticky .vf-donate-btn {
+            padding: 10px 18px;
+        }
+
+        .vf-main-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px;
+        }
+
+        .vf-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .vf-logo img {
+            width: 40px;
+            height: 40px;
+        }
+        /* Ensure header elements align on one line and logo doesn't force extra height */
+        .vf-main-header-content { align-items: center; }
+        .vf-logo img, .site-logo img, img.llo { max-height: 64px !important; height: auto !important; width: auto !important; }
+        .vf-nav-container { max-width: calc(100% - 320px); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .vf-nav-container::-webkit-scrollbar { display: none; }
+        .vf-header-actions { display:flex; align-items:center; gap:15px; flex-shrink:0; }
+
+        .site-footer p {
+            color: white !important;
+        }
+
+        .site-footer a {
+            color: white !important;
+        }
+
+        .site-footer .footer-heading {
+            font-size: 16px;
+            color: white;
+        }
+
+        .vf-logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #776176 !important;
+            border-color: #776176 !important;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #776176 !important;
+            border-color: #776176 !important;
+        }
+
+        /* Navigation */
+        .vf-nav-container {
+            background: #746175 !important;
+            border-radius: 50px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .vf-nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .vf-nav-menu li {
+            position: relative;
+        }
+
+        .vf-nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .vf-nav-menu a:hover {
+            background: white;
+            color: black !important;
+            transform: translateY(-2px);
+        }
+
+        .vf-nav-menu .vf-dropdown-arrow {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        /* Header Actions */
+        .vf-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .vf-search-icon {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #333;
+            padding: 8px;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .vf-search-icon:hover {
+            background: #f0f0f0;
+        }
+
+        .vf-donate-btn {
+            background: #776176;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        /* .vf-donate-btn:hover {
+background: #e0a800;
+transform: translateY(-2px);
+} */
+
+        /* Mobile Menu Toggle */
+        .vf-mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+            padding: 5px;
+        }
+
+        /* Icons using Unicode */
+        .vf-icon-email::before {
+            content: "✉";
+        }
+
+        .vf-icon-phone::before {
+            content: "📞";
+        }
+
+        .vf-icon-facebook::before {
+            content: "f";
+        }
+
+        .vf-icon-twitter::before {
+            content: "t";
+        }
+
+        .vf-icon-linkedin::before {
+            content: "in";
+        }
+
+        .vf-icon-instagram::before {
+            content: "ig";
+        }
+
+        .vf-icon-search::before {
+            content: "🔍";
+        }
+
+        .vf-icon-arrow::before {
+            content: "↗";
+        }
+
+        .vf-icon-dropdown::before {
+            content: "▼";
+        }
+
+        /* Rocket Animation Styles */
+        .vf-rocket-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .vf-rocket {
+            position: absolute;
+            width: 60px;
+            height: 90px;
+            will-change: transform;
+            filter: drop-shadow(0 0 15px rgba(255, 193, 7, 0.3));
+        }
+
+        .vf-rocket img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .vf-smoke {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .vf-smoke-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 193, 7, 0.6);
+            border-radius: 50%;
+            animation: vfSmokeFloat 2s ease-out forwards;
+        }
+
+        @keyframes vfSmokeFloat {
+            0% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(1.5);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(2) translateY(-20px);
+            }
+        }
+
+        @media screen and (min-device-width: 1100px) and (max-device-width: 1380px) {
+            .carousel-wrapper-xyz {
+                width: 1150px;
+                overflow: hidden;
+                position: relative;
+                background: transparent;
+                padding: 40px 0;
+                margin-top: -30px;
+                z-index: 2;
+                margin-left: 90px !important;
+            }
+
+            .shape2 {
+                margin-top: -40px !important;
+
+            }
+
+            .shape3 {
+                margin-top: -135px !important;
+
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .vf-logo-text {
+                font-size: 18px;
+            }
+
+            .vf-nav-menu a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            .vf-contact-info {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vf-top-header-content {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .vf-contact-info {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .vf-top-right {
+                gap: 15px;
+            }
+
+            .vf-main-header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .vf-logo {
+                order: 1;
+                flex: 1;
+            }
+
+            .vf-header-actions {
+                order: 2;
+                gap: 10px;
+            }
+
+            .vf-nav-container {
+                order: 3;
+                width: 100%;
+                border-radius: 15px;
+                display: none;
+                background: #ffc107;
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            .vf-nav-container.vf-active {
+                display: block;
+            }
+
+            .vf-nav-menu {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .vf-nav-menu a {
+                border-radius: 10px;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .vf-mobile-menu-toggle {
+                display: block;
+            }
+
+            .vf-logo-text {
+                font-size: 16px;
+            }
+
+            .vf-donate-btn {
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+
+            .vf-rocket {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vf-top-header {
+                font-size: 12px;
+            }
+
+            .vf-contact-info span {
+                font-size: 12px;
+            }
+
+            .vf-logo-text {
+                font-size: 14px;
+            }
+
+            .vf-nav-menu a {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .vf-donate-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .vf-top-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .vf-social-links {
+                gap: 8px;
+            }
+        }
+
+        @media screen and (min-device-width: 300px) and (max-device-width: 400px) {
+            .vf-main-header-content {
+                /*flex-wrap: nowrap ;*/
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .vf-top-right {
+
+                display: none !important;
+            }
+
+            .vf-contact-info {
+                display: inline-block !important;
+                gap: 30px;
+            }
+
+            .vf-contact-info span {
+                display: inline-block !important;
+                align-items: center;
+                gap: 8px;
+                color: white;
+            }
+
+            .shape3 {
+                margin-top: -130px !important;
+
+            }
+
+            h1 {
+                font-weight: 500 !important;
+                font-size: 3rem !important;
+                font-family: "Mansalva", cursive !important;
+            }
+
+            .shape2 {
+                margin-top: -12px !important;
+
+            }
+
+            .shape {
+                position: absolute;
+                margin-top: -1px !important;
+
+            }
+
+            .vf-header-actions {
+                order: 2;
+                gap: 1px !important;
+            }
+
+            .vf-nav-container {
+                order: 4;
+                width: 100%;
+                border-radius: 15px;
+                display: none;
+                background: #746175;
+                padding: 10px;
+                margin-top: 5px;
+                position: relative;
+                /* make it stay below */
+                z-index: 999;
+            }
+
+            .vf-main-header-content {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .vf-nav-container.vf-active {
+                display: block;
+            }
+
+            .site-footer .footer-heading {
+
+                margin-top: 50px !important;
+            }
+        }
+
+        .site-footer {
+            padding: 8em 0 0 0 !important;
+            background-color: #8e728fde !important;
+        }
+
+        @media (max-width: 380px) {
+            .vf-main-header-content {
+                padding: 8px;
+            }
+
+            .vf-main-header-content {
+                /*flex-wrap: nowrap ;*/
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .vf-main-header-content {
+                /*flex-wrap: nowrap ;*/
+                gap: 15px;
+                padding: 10px;
+            }
+
+            h1 {
+                font-weight: 500 !important;
+                font-size: 3rem !important;
+                font-family: "Mansalva", cursive !important;
+            }
+
+            .shape2 {
+                margin-top: -12px !important;
+
+            }
+
+            .shape {
+                position: absolute;
+                margin-top: -1px !important;
+
+            }
+
+            .vf-header-actions {
+                order: 2;
+                gap: 1px !important;
+            }
+
+            .vf-logo-text {
+                display: none;
+            }
+
+            .vf-donate-btn span {
+                display: none;
+            }
+
+            .carousel-wrapper-xyz {
+                width: 360px !important;
+                overflow: hidden;
+                position: relative;
+                background: transparent;
+                padding: 40px 0;
+                margin-top: -30px;
+                z-index: 2;
+                margin-left: 10px !important;
+            }
+        }
+
+        h1 {
+
+            margin-top: 100px !important;
+        }
+
+        /* Right Image Section */
+        .vasistha-image-container {
+            flex: 1;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .vasistha-image-slider {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .vasistha-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .vasistha-slide.vasistha-active {
+            opacity: 1;
+        }
+
+        .vasistha-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vasistha-slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 30px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .vasistha-slide.vasistha-active .vasistha-slide-overlay {
+            transform: translateY(0);
+        }
+
+        .vasistha-slide-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .vasistha-slide-desc {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .vasistha-slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .vasistha-nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .vasistha-nav-dot.vasistha-active {
+            background: #746175;
+            transform: scale(1.2);
+        }
+
+        .vasistha-slider-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            color: #776176;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vasistha-slider-arrows:hover {
+            background: #fff;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 4px 15px rgba(119, 97, 118, 0.3);
+        }
+
+        .vasistha-arrow-left {
+            left: 15px;
+        }
+
+        .vasistha-arrow-right {
+            right: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .vasistha-main-container {
+                padding: 40px 15px;
+            }
+
+            .vasistha-section-wrapper {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .vasistha-tab-buttons {
+                flex-direction: column;
+                border-radius: 12px 12px 0 0;
+            }
+
+            .vasistha-tab-btn {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 15px 20px;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            .vasistha-tab-btn:last-child {
+                border-bottom: none;
+            }
+
+            .vasistha-tab-btn:hover {
+                transform: translateX(5px);
+            }
+
+            .vasistha-tab-btn.vasistha-active::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                height: auto;
+                background: #746175;
+            }
+
+            .vasistha-tab-content {
+                padding: 20px;
+                min-height: auto;
+            }
+
+            .vasistha-tab-title {
+                font-size: 20px;
+            }
+
+            .vasistha-tab-text {
+                font-size: 14px;
+            }
+
+            .vasistha-image-slider {
+                height: 300px;
+            }
+
+            .vasistha-slide-overlay {
+                padding: 20px;
+            }
+
+            .vasistha-slider-arrows {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vasistha-main-container {
+                padding: 30px 10px;
+            }
+
+            .vasistha-tab-content {
+                padding: 15px;
+            }
+
+            .vasistha-tab-title {
+                font-size: 18px;
+            }
+
+            .vasistha-image-slider {
+                height: 250px;
+            }
+
+            .vasistha-values-list {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .vasistha-value-item {
+                text-align: center;
+            }
+        }
+
+        /* Fix dropdown visibility */
+        .vf-nav-container {
+            overflow: visible !important;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .vf-nav-menu .has-dropdown {
+            position: relative;
+        }
+
+        .vf-submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            flex-direction: column;
+            background-color: #746175;
+            border-radius: 10px;
+            padding: 0;
+            min-width: 200px;
+            z-index: 9999;
+        }
+
+        .vf-submenu li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .vf-submenu li:last-child {
+            border-bottom: none;
+        }
+
+        .vf-submenu li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            white-space: nowrap;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .vf-submenu li a:hover {
+            background-color: white;
+            color: #2c5530;
+        }
+
+        /* Show dropdown on hover */
+        .vf-nav-menu .has-dropdown:hover .vf-submenu {
+            display: block;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/vasistha-events.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <div class="vf-header-wrapper">
+        <!-- Top Header Bar -->
+        <div class="vf-top-header">
+            <div class="vf-top-header-content">
+                <div class="vf-contact-info">
+                    <span><a href="vasisthafoundation@gmail.com" class="vf-icon-email"
+                            style="color: white;">vasisthafoundation@gmail.com</a></span>
+                    <!-- <span><i class="vf-icon-phone"></i> +91 9876543210</span> -->
+                </div>
+                <div class="vf-top-right">
+                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;"> +91
+                            9090063633</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="vf-main-header">
+            <!-- Rocket Animation Container -->
+
+
+            <div class="vf-main-header-content">
+                <div class="site-logo">
+                    <a href="index.html" class="text-white"><img src="images/logo.png" class="llo" height="80px"></a>
+                </div>
+
+                <div class="vf-nav-container" id="vfNavContainer">
+
+                    <ul class="vf-nav-menu">
+
+                        <li class="has-dropdown">
+                            <a href="about.html">About Us <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="about.html">Vasistha foundation</a></li>
+                                <li><a href="team.html">Team Vasistha</a></li>
+                                <li><a href="mou.html">MoU</a></li>
+
+                            </ul>
+                        </li>
+                                                                        <li class="has-dropdown">
+                                                                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
+                                                                            <ul class="vf-submenu">
+                                                                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
+                                                                            </ul>
+                                                                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Projects<span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="csr-project.html">CSR Project</a></li>
+                                <li><a href="govt-project.html">Govt. projects</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">JoinUs<span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="membership.html">Membership</a></li>
+                                <li><a href="volunteer.html">Volunteer</a></li>
+
+                            </ul>
+                        </li>
+                                                <li class="has-dropdown">
+                                                    <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
+                                                    <ul class="vf-submenu">
+                                                        <li><a href="our-engagement.html">Overview</a></li>
+                                                        <li><a href="e-bulletin.html">E-bulletin</a></li>
+                                                    </ul>
+                                                </li>
+                        <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
+                                Prakashan<span class="vf-icon-dropdown"></a>
+                            <ul class="vf-submenu">
+                                <li><a href="vasistha-prakashan.html">Books</a></li>
+                                <li><a href="vasistha-prakashan.html">News letter</a></li>
+                                <li><a href="vasistha-prakashan.html">Booklet</a></li>
+                                <li><a href="vasistha-prakashan.html">Brochure</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li class="has-dropdown"><a href="career.html">Career<span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="notice.html">Notice</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li><a href="contact.html">Contact Us</a></li> -->
+                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer">Utkalitta</a></li>
+                    </ul>
+                </div>
+
+                <div class="vf-header-actions">
+                    <!-- <button class="vf-search-icon vf-icon-search"></button> -->
+                    <a href="contact.html" class="vf-donate-btn">
+                        Contact Us <span class="vf-icon-arrow"></span>
+                    </a>
+                    <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle">☰</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="owl-carousel-wrapper">
+
+
+
+        <div class="box-92819">
+            <h1 class="text-white mb-3">Events</h1>
+            <!-- <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ab doloremque a quia laboriosam suscipit, iure illum perspiciatis!</p> -->
+        </div>
+
+
+        <div class="ftco-cover-1 overlay" style="background-image: url('images/hero_2.jpg');"></div>
+
+    </div>
+
+
+    <!-- <div class="site-section"> -->
+    <div class="vasistha-events-section ">
+
+
+
+        <section class="vasistha-events-main vasistha-events-overlay">
+            <div class="vasistha-floating-elements">
+                <div class="vasistha-floating-element"></div>
+                <div class="vasistha-floating-element"></div>
+                <div class="vasistha-floating-element"></div>
+            </div>
+
+            <div class="site-section container vasistha-events-container">
+                <div class="vasistha-events-header">
+                    <div class="vasistha-events-badge">Event Schedule 🔥</div>
+                    <h1 class="vasistha-events-title">Upcoming Events</h1>
+                    <p class="vasistha-events-subtitle">
+                        Join us for impactful community engagements, educational workshops, and awareness programs
+                        designed
+                        to empower lives and transform societies.
+                    </p>
+                </div>
+
+                <div class="vasistha-event-schedule">
+                    <div class="vasistha-schedule-header">
+                        <h2 class="vasistha-schedule-title">Event Calendar</h2>
+                        <div class="vasistha-schedule-days">
+                            <div class="vasistha-schedule-day">
+                                <div class="vasistha-day-date">25/07/2025</div>
+                                <div class="vasistha-day-name">Friday</div>
+                                <div class="vasistha-day-number">DAY 01</div>
+                            </div>
+                            <div class="vasistha-schedule-day vasistha-active">
+                                <div class="vasistha-day-date">26/07/2025</div>
+                                <div class="vasistha-day-name">Saturday</div>
+                                <div class="vasistha-day-number">DAY 02</div>
+                            </div>
+                            <div class="vasistha-schedule-day">
+                                <div class="vasistha-day-date">27/07/2025</div>
+                                <div class="vasistha-day-name">Sunday</div>
+                                <div class="vasistha-day-number">DAY 03</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vasistha-events-grid">
+
+
+                    <div class="vf-card">
+                        <img src="images/image1.png" alt="Environmental Awareness">
+                        <div class="vasistha-event-content">
+                            <div class="vasistha-event-location">Puri, Odisha</div>
+                            <h3 class="vasistha-event-title">Educational Awareness Program</h3>
+                            <div class="vasistha-event-meta">
+                                <span class="vasistha-event-speaker">Dr. Sanjay Kumar Sarangi</span>
+                                <span class="vasistha-event-time">10:00 AM - 12:00 PM</span>
+                            </div>
+                            <p class="vasistha-event-description">
+                                Join us for an interactive session on inclusive education and career guidance for youth.
+                                Our
+                                experts will share insights on skill development and educational opportunities for a
+                                brighter future.
+                            </p>
+                            <div class="vasistha-event-actions">
+                                <a href="contact.html" class="vasistha-btn vasistha-btn-contact">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vf-card">
+                        <img src="images/env2.png" alt="Environmental Awareness">
+                        <div class="vasistha-event-content">
+                            <div class="vasistha-event-location">Gundicha Vihar, Puri</div>
+                            <h3 class="vasistha-event-title">Environmental Awareness Seminar</h3>
+                            <div class="vasistha-event-meta">
+                                <span class="vasistha-event-speaker">Swayam Ananda Das</span>
+                                <span class="vasistha-event-time">02:00 PM - 04:00 PM</span>
+                            </div>
+                            <p class="vasistha-event-description">
+                                Discover sustainable practices and environmental stewardship through our comprehensive
+                                awareness program focusing on climate change, conservation, and community
+                                responsibility.
+                            </p>
+                            <div href="contact.html" class="vasistha-event-actions">
+                                <a href="contact.html" class="vasistha-btn vasistha-btn-contact">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vf-card">
+                        <img src="images/covid.png" alt="Environmental Awareness">
+                        <div class="vasistha-event-content">
+
+                            <div class="vasistha-event-location">Community Center, Puri</div>
+                            <h3 class="vasistha-event-title">Health & Hygiene Campaign</h3>
+                            <div class="vasistha-event-meta">
+                                <span class="vasistha-event-speaker">Health Team</span>
+                                <span class="vasistha-event-time">09:00 AM - 11:00 AM</span>
+                            </div>
+                            <p class="vasistha-event-description">
+                                Comprehensive health awareness program covering hygiene practices, preventive care, and
+                                community wellness initiatives designed for all age groups in our community.
+                            </p>
+                            <div href="contact.html" class="vasistha-event-actions">
+                                <a href="contact.html" class="vasistha-btn vasistha-btn-contact">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vf-card">
+                        <img src="images/project_udaan_children.jpg" alt="Environmental Awareness">
+                        <div class="vasistha-event-content">
+                            <div class="vasistha-event-location">Vasistha Foundation Office</div>
+                            <h3 class="vasistha-event-title">Career Mentorship & Counseling</h3>
+                            <div class="vasistha-event-meta">
+                                <span class="vasistha-event-speaker">Rasmi Ranjan Pradhan</span>
+                                <span class="vasistha-event-time">03:00 PM - 05:00 PM</span>
+                            </div>
+                            <p class="vasistha-event-description">
+                                One-on-one career guidance sessions and group mentorship programs designed to help youth
+                                identify their potential, explore career paths, and achieve their goals.
+                            </p>
+                            <div class="vasistha-event-actions">
+                                <a href="contact.html" class="vasistha-btn vasistha-btn-contact">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vf-card">
+                        <img src="images/agree.png" alt="Environmental Awareness">
+                        <div class="vasistha-event-content">
+                            <div class="vasistha-event-location">Rural Areas, Puri District</div>
+                            <h3 class="vasistha-event-title">Agricultural Development Workshop</h3>
+                            <div class="vasistha-event-meta">
+                                <span class="vasistha-event-speaker">Swayam Bikash Das</span>
+                                <span class="vasistha-event-time">11:00 AM - 01:00 PM</span>
+                            </div>
+                            <p class="vasistha-event-description">
+                                Learn about sustainable farming practices, modern agricultural techniques, and support
+                                systems available for farmers to improve crop yield and income generation.
+                            </p>
+                            <div class="vasistha-event-actions">
+                                <a href="contact.html" class="vasistha-btn vasistha-btn-contact">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vf-card">
+                        <img src="images/parents.png" alt="Environmental Awareness">
+                        <div class="vasistha-event-content">
+                            <div class="vasistha-event-location">Sarbodaya Nagar, Puri</div>
+                            <h3 class="vasistha-event-title">Parent-Student Awareness Session</h3>
+                            <div class="vasistha-event-meta">
+                                <span class="vasistha-event-speaker">Adarsh Kumar Samal</span>
+                                <span class="vasistha-event-time">04:00 PM - 06:00 PM</span>
+                            </div>
+                            <p class="vasistha-event-description">
+                                Interactive sessions designed to bridge the gap between parents and students, focusing
+                                on
+                                communication, understanding, and collaborative support for educational success.
+                            </p>
+                            <div class="vasistha-event-actions">
+                                <a href="contact.html" class="vasistha-btn vasistha-btn-contact">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- </div> -->
+    </div>
+
+
+
+
+    <div class="site-section">
+        <div class="container">
+
+            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
+                <div class="">
+                    <h2 class="text-cursive">Helping the Homeless, Hungry, and Hurtings Children</h2>
+                </div>
+                <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="vf-footer-wrapper">
+        <div class="vf-footer-container">
+
+            <div class="vf-footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="about.html">Vasistha Foundation</a></li>
+                    <li><a href="team.html">Team Vasistha</a></li>
+                    <li><a href="mou.html">MOUs</a></li>
+                </ul>
+            </div>
+
+            <div class="vf-footer-col">
+                <h4>Projects</h4>
+                <ul>
+                    <li><a href="csr-project.html">CSR Projects</a></li>
+                    <li><a href="govt-project.html">Govt. Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="vf-footer-col">
+                <h4>Join Us</h4>
+                <ul>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="our-engagement.html">Engagement</a></li>
+                </ul>
+            </div>
+
+            <div class="vf-footer-col">
+                <h4>Publications</h4>
+                <ul>
+                    <li><a href="vasistha-prakashan.html">Vasistha Prakashan</a></li>
+                    <li><a href="#">Newsletters</a></li>
+                    <li><a href="#">Magazines</a></li>
+                </ul>
+            </div>
+
+            <div class="vf-footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:vasisthafoundation@gmail.com">vasisthafoundation@gmail.com</a></li>
+                    <li><a href="tel:9090063633">+91 9090063633</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="vf-footer-bottom">
+            <p>&copy; 2025 Vasistha Foundation. All rights reserved.</p>
+            <div class="vf-footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    <script>
+        // Tab functionality
+        const vasisthaTabs = document.querySelectorAll('.vasistha-tab-btn');
+        const vasisthaPanels = document.querySelectorAll('.vasistha-tab-panel');
+
+        vasisthaTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.getAttribute('data-tab');
+
+                // Remove active class from all tabs and panels
+                vasisthaTabs.forEach(t => t.classList.remove('vasistha-active'));
+                vasisthaPanels.forEach(p => p.classList.remove('vasistha-active'));
+
+                // Add active class to clicked tab and corresponding panel
+                tab.classList.add('vasistha-active');
+                document.getElementById(targetTab).classList.add('vasistha-active');
+            });
+        });
+
+        // Image slider functionality
+        let vasisthaSlideCurrent = 0;
+        const vasisthaSlidesTotal = document.querySelectorAll('.vasistha-slide').length;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.vasistha-slide');
+            const dots = document.querySelectorAll('.vasistha-nav-dot');
+
+            if (n >= vasisthaSlidesTotal) vasisthaSlideCurrent = 0;
+            if (n < 0) vasisthaSlideCurrent = vasisthaSlidesTotal - 1;
+
+            slides.forEach(slide => slide.classList.remove('vasistha-active'));
+            dots.forEach(dot => dot.classList.remove('vasistha-active'));
+
+            slides[vasisthaSlideCurrent].classList.add('vasistha-active');
+            dots[vasisthaSlideCurrent].classList.add('vasistha-active');
+        }
+
+        function changeSlide(n) {
+            vasisthaSlideCurrent += n;
+            showSlide(vasisthaSlideCurrent);
+        }
+
+        function currentSlide(n) {
+            vasisthaSlideCurrent = n - 1;
+            showSlide(vasisthaSlideCurrent);
+        }
+
+        // Auto-play slider
+        setInterval(() => {
+            vasisthaSlideCurrent++;
+            showSlide(vasisthaSlideCurrent);
+        }, 5000);
+
+        // Initialize
+        showSlide(vasisthaSlideCurrent);
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle - Vasistha Foundation Header
+        const vfMobileMenuToggle = document.getElementById('vfMobileMenuToggle');
+        const vfNavContainer = document.getElementById('vfNavContainer');
+
+        if (vfMobileMenuToggle && vfNavContainer) {
+            vfMobileMenuToggle.addEventListener('click', function () {
+                vfNavContainer.classList.toggle('vf-active');
+                this.textContent = vfNavContainer.classList.contains('vf-active') ? '✕' : '☰';
+            });
+        }
+
+        // Smooth hover animations for nav menu
+        document.querySelectorAll('.vf-nav-menu a').forEach(link => {
+            link.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-2px)';
+            });
+
+            link.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Donate button hover effect
+        const vfDonateBtn = document.querySelector('.vf-donate-btn');
+        if (vfDonateBtn) {
+            vfDonateBtn.addEventListener('mouseenter', function () {
+                this.style.boxShadow = '0 8px 20px rgba(255, 193, 7, 0.3)';
+            });
+
+            vfDonateBtn.addEventListener('mouseleave', function () {
+                this.style.boxShadow = 'none';
+            });
+        }
+
+        // Search functionality placeholder
+        const vfSearchIcon = document.querySelector('.vf-search-icon');
+        if (vfSearchIcon) {
+            vfSearchIcon.addEventListener('click', function () {
+                alert('Search functionality would be implemented here!');
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (event) {
+            if (vfNavContainer && vfMobileMenuToggle) {
+                if (!vfNavContainer.contains(event.target) && !vfMobileMenuToggle.contains(event.target)) {
+                    vfNavContainer.classList.remove('vf-active');
+                    vfMobileMenuToggle.textContent = '☰';
+                }
+            }
+        });
+
+        // Handle sticky header on scroll
+        let vfScrollTimeout;
+        let vfLastScrollTop = 0;
+
+        window.addEventListener('scroll', function () {
+            clearTimeout(vfScrollTimeout);
+            vfScrollTimeout = setTimeout(function () {
+                const vfMainHeader = document.querySelector('.vf-main-header');
+                const vfTopHeader = document.querySelector('.vf-top-header');
+                const vfScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (vfMainHeader && vfTopHeader) {
+                    const vfTopHeaderHeight = vfTopHeader.offsetHeight;
+
+                    // Add sticky class when scrolled past top header
+                    if (vfScrollTop > vfTopHeaderHeight) {
+                        vfMainHeader.classList.add('vf-sticky');
+                    } else {
+                        vfMainHeader.classList.remove('vf-sticky');
+                    }
+
+                    vfLastScrollTop = vfScrollTop;
+                }
+            }, 10);
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768 && vfNavContainer) {
+                vfNavContainer.classList.remove('vf-active');
+                if (vfMobileMenuToggle) {
+                    vfMobileMenuToggle.textContent = '☰';
+                }
+            }
+        });
+
+        // Rocket Animation System
+        class RocketAnimation {
+            constructor() {
+                this.rocket = document.getElementById('vfRocket');
+                this.smokeContainer = document.getElementById('vfSmoke');
+                this.headerContainer = document.querySelector('.vf-main-header');
+                this.isRunning = false;
+                this.animationId = null;
+                this.phase = 'vertical'; // 'vertical' or 'horizontal'
+                this.startTime = null;
+                this.smokePools = [];
+                this.maxSmokeParticles = 20;
+
+                this.init();
+            }
+
+            init() {
+                // Pre-create smoke particles for better performance
+                for (let i = 0; i < this.maxSmokeParticles; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'vf-smoke-particle';
+                    particle.style.display = 'none';
+                    this.smokeContainer.appendChild(particle);
+                    this.smokePools.push({
+                        element: particle,
+                        inUse: false
+                    });
+                }
+
+                this.startAnimation();
+            }
+
+            startAnimation() {
+                if (this.isRunning) return;
+
+                this.isRunning = true;
+                this.phase = 'vertical';
+                this.startTime = performance.now();
+
+                // Position rocket at bottom center, below header
+                const headerRect = this.headerContainer.getBoundingClientRect();
+                this.rocket.style.left = '50%';
+                this.rocket.style.top = '120px';
+                this.rocket.style.transform = 'translateX(-50%) rotate(0deg)';
+                this.rocket.style.display = 'block';
+
+                this.animate();
+            }
+
+            animate() {
+                if (!this.isRunning) return;
+
+                const currentTime = performance.now();
+                const elapsed = currentTime - this.startTime;
+
+                if (this.phase === 'vertical') {
+                    this.animateVertical(elapsed);
+                } else {
+                    this.animateHorizontal(elapsed);
+                }
+
+                // Create smoke trail
+                this.createSmoke();
+
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            animateVertical(elapsed) {
+                const duration = 3000; // 3 seconds for vertical phase
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Smooth upward movement with slight easing
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const startY = 120;
+                const endY = -80;
+                const currentY = startY + (endY - startY) * easeProgress;
+
+                this.rocket.style.top = `${currentY}px`;
+
+                if (progress >= 1) {
+                    // Transition to horizontal phase
+                    this.phase = 'horizontal';
+                    this.startTime = performance.now();
+
+                    // Position rocket at left side for horizontal movement
+                    this.rocket.style.left = '-80px';
+                    this.rocket.style.top = '50%';
+                    this.rocket.style.transform = 'translateY(-50%) rotate(90deg)';
+                }
+            }
+
+            animateHorizontal(elapsed) {
+                const duration = 12000; // 8 seconds for horizontal phase
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Calculate horizontal position
+                const containerWidth = this.headerContainer.offsetWidth;
+                const startX = -80;
+                const endX = containerWidth + 80;
+                const currentX = startX + (endX - startX) * progress;
+
+                // Create wave motion with longer wavelength
+                const waveFrequency = 0.005; // Much slower frequency for longer waves
+                const waveAmplitude = 10; // Increased amplitude
+                const waveY = Math.sin(currentX * waveFrequency) * waveAmplitude;
+
+                this.rocket.style.left = `${currentX}px`;
+                this.rocket.style.transform = `translateY(calc(-50% + ${waveY}px)) rotate(90deg)`;
+
+                if (progress >= 1) {
+                    // Restart animation
+                    this.phase = 'vertical';
+                    this.startTime = performance.now();
+
+                    // Reset to vertical position
+                    this.rocket.style.left = '50%';
+                    this.rocket.style.top = '120px';
+                    this.rocket.style.transform = 'translateX(-50%) rotate(0deg)';
+                }
+            }
+
+            createSmoke() {
+                // Create smoke particles at rocket position
+                if (Math.random() < 0.7) { // 70% chance to create smoke
+                    const availableParticle = this.smokePools.find(p => !p.inUse);
+                    if (availableParticle) {
+                        const rocketRect = this.rocket.getBoundingClientRect();
+                        const headerRect = this.headerContainer.getBoundingClientRect();
+
+                        const particle = availableParticle.element;
+                        availableParticle.inUse = true;
+
+                        // Position particle at rocket's flame position
+                        const rocketX = rocketRect.left - headerRect.left + rocketRect.width / 2;
+                        const rocketY = rocketRect.top - headerRect.top + rocketRect.height;
+
+                        particle.style.left = `${rocketX + (Math.random() - 0.5) * 10}px`;
+                        particle.style.top = `${rocketY + Math.random() * 10}px`;
+                        particle.style.display = 'block';
+
+                        // Reset animation
+                        particle.style.animation = 'none';
+                        particle.offsetHeight; // Trigger reflow
+                        particle.style.animation = 'vfSmokeFloat 2s ease-out forwards';
+
+                        // Return particle to pool after animation
+                        setTimeout(() => {
+                            particle.style.display = 'none';
+                            availableParticle.inUse = false;
+                        }, 2000);
+                    }
+                }
+            }
+
+            stop() {
+                this.isRunning = false;
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                    this.animationId = null;
+                }
+                this.rocket.style.display = 'none';
+            }
+        }
+
+        // Initialize rocket animation when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Small delay to ensure everything is rendered
+            setTimeout(() => {
+                const rocketAnimation = new RocketAnimation();
+
+                // Optional: Add controls for debugging
+                window.vfRocketAnimation = rocketAnimation;
+            }, 500);
+        });
+    </script>
+    <script>
+        // Vasistha Events Interactive Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Interactive event cards with unique namespace
+            const vasisthaEventCards = document.querySelectorAll('.vasistha-event-card');
+
+            vasisthaEventCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Schedule day selection with unique namespace
+            const vasisthaScheduleDays = document.querySelectorAll('.vasistha-schedule-day');
+
+            vasisthaScheduleDays.forEach(day => {
+                day.addEventListener('click', function () {
+                    // Remove active class from all days
+                    vasisthaScheduleDays.forEach(d => d.classList.remove('vasistha-active'));
+                    // Add active class to clicked day
+                    this.classList.add('vasistha-active');
+
+                    // Add animation effect
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            });
+
+            // Contact button interactions with unique namespace
+            const vasisthaButtons = document.querySelectorAll('.vasistha-btn');
+
+            vasisthaButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    // Add click animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+
+                    // Let the default link behavior proceed to contact.html
+                });
+            });
+
+            // Intersection Observer for scroll animations with unique namespace
+            const vasisthaObserverOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const vasisthaObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, vasisthaObserverOptions);
+
+            // Observe event cards for scroll animations
+            vasisthaEventCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                vasisthaObserver.observe(card);
+            });
+
+            // Event timing hover effects with unique namespace
+            const vasisthaEventTimes = document.querySelectorAll('.vasistha-event-time');
+            vasisthaEventTimes.forEach(time => {
+                time.addEventListener('mouseover', function () {
+                    this.style.color = '#909090';
+                });
+
+                time.addEventListener('mouseout', function () {
+                    this.style.color = '#676678';
+                });
+            });
+
+            // Loading animation for the main section
+            const vasisthaEventsSection = document.querySelector('.vasistha-events-main');
+            vasisthaEventsSection.style.opacity = '0';
+            vasisthaEventsSection.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                vasisthaEventsSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                vasisthaEventsSection.style.opacity = '1';
+                vasisthaEventsSection.style.transform = 'translateY(0)';
+            }, 100);
+
+            // Responsive menu toggle function (if needed)
+            window.vasisthaToggleMobileMenu = function () {
+                const mobileMenu = document.querySelector('.vasistha-mobile-menu');
+                if (mobileMenu) {
+                    mobileMenu.classList.toggle('vasistha-active');
+                }
+            };
+
+            // Custom event dispatcher for integration
+            const vasisthaEventLoadedEvent = new CustomEvent('vasisthaEventsLoaded', {
+                detail: {
+                    message: 'Vasistha Events Section Loaded Successfully',
+                    timestamp: new Date().toISOString()
+                }
+            });
+
+            document.dispatchEvent(vasisthaEventLoadedEvent);
+        });
+
+        // Global function to update event data (if needed for dynamic content)
+        window.updateVasisthaEvents = function (eventData) {
+            console.log('Updating Vasistha Events:', eventData);
+            // Implementation for dynamic event updates
+        };
+    </script>
+    <script>
+        // Mobile dropdown toggle functionality
+        // Add this to your existing JavaScript
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle mobile dropdown clicks
+            const mobileDropdowns = document.querySelectorAll('.vf-nav-menu .has-dropdown > a');
+
+            mobileDropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function (e) {
+                    // Only prevent default on mobile
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const parentLi = this.parentElement;
+                        const isActive = parentLi.classList.contains('active');
+                        // Close all other dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            if (item !== parentLi) {
+                                item.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current dropdown
+                        if (isActive) {
+                            parentLi.classList.remove('active');
+                        } else {
+                            parentLi.classList.add('active');
+                        }
+                    }
+            }
+    });
+    });
+
+        // Close dropdowns when clicking submenu items
+        const submenuLinks = document.querySelectorAll('.vf-submenu a');
+        submenuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Close the mobile menu after clicking submenu item
+                if (window.innerWidth <= 768) {
+                    const navContainer = document.getElementById('vfNavContainer'); const
+                        mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
+                            navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
+                        } // Close all dropdowns
+                    document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                }
+            });
+        });
+        });
+    </script>
+</body>
+
+</html>
