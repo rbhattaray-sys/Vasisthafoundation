@@ -23,8 +23,8 @@
                 /* Limit height to 70% of viewport */
                 overflow-y: auto;
                 /* Enable vertical scrolling */
-                overflow-x: hidden;
-                /* Hide horizontal overflow */
+                overflow-x: visible !important;
+                /* Show horizontal overflow for nav items */
             }
 
             /* Fix dropdown positioning in mobile */
@@ -580,10 +580,21 @@
         .vf-nav-container {
             background: #746175 !important;
             border-radius: 50px;
-            padding: 5px;
+            padding: 8px 18px !important;
             display: flex;
             align-items: center;
             gap: 5px;
+            overflow: visible !important;
+            min-width: fit-content !important;
+        }
+
+        /* Ensure first and last nav items are fully visible */
+        .vf-nav-menu li:first-child a {
+            margin-left: 0 !important;
+        }
+
+        .vf-nav-menu li:last-child a {
+            margin-right: 0 !important;
         }
 
         .vf-nav-menu {
@@ -607,6 +618,12 @@
             transition: all 0.3s;
             font-weight: 500;
             white-space: nowrap;
+            border: none !important;
+            background: transparent !important;
+            outline: none !important;
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
         }
 
         .vf-nav-menu a:hover {
@@ -678,10 +695,12 @@
         /* Icons using Unicode */
         .vf-icon-email::before {
             content: "✉";
+            margin-right: 5px;
         }
 
         .vf-icon-phone::before {
             content: "📞";
+            margin-right: 5px;
         }
 
         .vf-icon-facebook::before {
@@ -1064,6 +1083,20 @@
             z-index: 1000;
         }
 
+        /* Ensure nav links don't look like buttons */
+        .vf-nav-menu a,
+        .vf-nav-menu a:link,
+        .vf-nav-menu a:visited,
+        .vf-nav-menu a:active {
+            cursor: pointer !important;
+            user-select: none !important;
+        }
+
+        .vf-nav-menu a:hover {
+            background: white !important;
+            color: black !important;
+        }
+
         .vf-nav-menu .has-dropdown {
             position: relative;
         }
@@ -1143,13 +1176,12 @@
         <div class="vf-top-header">
             <div class="vf-top-header-content">
                 <div class="vf-contact-info">
-                    <span><a href="vasisthafoundation@gmail.com" class="vf-icon-email"
-                            style="color: white;">vasisthafoundation@gmail.com</a></span>
+                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email"
+                            style="color: white;" aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
                     <!-- <span><i class="vf-icon-phone"></i> +91 9876543210</span> -->
                 </div>
                 <div class="vf-top-right">
-                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;"> +91
-                            9090063633</a></span>
+                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;" aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
                 </div>
             </div>
         </div>
@@ -1160,78 +1192,72 @@
 
             <div class="vf-main-header-content">
                 <div class="site-logo">
-                    <a href="index.html" class="text-white"><img src="images/logo.png" class="llo" height="80px"></a>
+                    <a href="index.html" class="text-white" aria-label="Vasistha Foundation Home"><img src="images/logo.png" class="llo" height="80px" alt="Vasistha Foundation Logo"></a>
                 </div>
 
-                <div class="vf-nav-container" id="vfNavContainer">
+                <nav class="vf-nav-container" id="vfNavContainer" role="navigation" aria-label="Main navigation">
 
-                    <ul class="vf-nav-menu">
+                    <ul class="vf-nav-menu" role="menubar">
 
-                        <li class="has-dropdown">
-                            <a href="about.html">About Us <span class="vf-icon-dropdown"></span></a>
-                            <ul class="vf-submenu">
-                                <li><a href="about.html">Vasistha foundation</a></li>
-                                <li><a href="team.html">Team Vasistha</a></li>
-                                <li><a href="mou.html">MoU</a></li>
-
+                        <li class="has-dropdown" role="none">
+                            <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <ul class="vf-submenu" role="menu">
+                                <li role="none"><a href="about.html" role="menuitem">Vasistha foundation</a></li>
+                                <li role="none"><a href="team.html" role="menuitem">Team Vasistha</a></li>
+                                <li role="none"><a href="mou.html" role="menuitem">MoU</a></li>
                             </ul>
                         </li>
-                                                                        <li class="has-dropdown">
-                                                                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
-                                                                            <ul class="vf-submenu">
-                                                                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
-                                                                            </ul>
-                                                                        </li>
-                        <li class="has-dropdown">
-                            <a href="#">Projects<span class="vf-icon-dropdown"></span></a>
-                            <ul class="vf-submenu">
-                                <li><a href="csr-project.html">CSR Project</a></li>
-                                <li><a href="govt-project.html">Govt. projects</a></li>
-
+                        <li class="has-dropdown" role="none">
+                            <a href="events.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Events <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <ul class="vf-submenu" role="menu">
+                                <li role="none"><a href="workshops-seminar.html" role="menuitem">Workshop-Seminar</a></li>
                             </ul>
                         </li>
-                        <li class="has-dropdown">
-                            <a href="#">JoinUs<span class="vf-icon-dropdown"></span></a>
-                            <ul class="vf-submenu">
-                                <li><a href="membership.html">Membership</a></li>
-                                <li><a href="volunteer.html">Volunteer</a></li>
-
+                        <li class="has-dropdown" role="none">
+                            <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Projects<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <ul class="vf-submenu" role="menu">
+                                <li role="none"><a href="csr-project.html" role="menuitem">CSR Project</a></li>
+                                <li role="none"><a href="govt-project.html" role="menuitem">Govt. projects</a></li>
                             </ul>
                         </li>
-                                                <li class="has-dropdown">
-                                                    <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
-                                                    <ul class="vf-submenu">
-                                                        <li><a href="our-engagement.html">Overview</a></li>
-                                                        <li><a href="e-bulletin.html">E-bulletin</a></li>
-                                                    </ul>
-                                                </li>
-                        <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
-                                Prakashan<span class="vf-icon-dropdown"></a>
-                            <ul class="vf-submenu">
-                                <li><a href="vasistha-prakashan.html">Books</a></li>
-                                <li><a href="vasistha-prakashan.html">News letter</a></li>
-                                <li><a href="vasistha-prakashan.html">Booklet</a></li>
-                                <li><a href="vasistha-prakashan.html">Brochure</a></li>
+                        <li class="has-dropdown" role="none">
+                            <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">JoinUs<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <ul class="vf-submenu" role="menu">
+                                <li role="none"><a href="membership.html" role="menuitem">Membership</a></li>
+                                <li role="none"><a href="volunteer.html" role="menuitem">Volunteer</a></li>
                             </ul>
                         </li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li class="has-dropdown"><a href="career.html">Career<span class="vf-icon-dropdown"></span></a>
-                            <ul class="vf-submenu">
-                                <li><a href="notice.html">Notice</a></li>
+                        <li class="has-dropdown" role="none">
+                            <a href="our-engagement.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Our Engagement <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <ul class="vf-submenu" role="menu">
+                                <li role="none"><a href="our-engagement.html" role="menuitem">Overview</a></li>
+                                <li role="none"><a href="e-bulletin.html" role="menuitem">E-bulletin</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown" role="none"><a href="vasistha-prakashan.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Vasistha Prakashan<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <ul class="vf-submenu" role="menu">
+                                <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Books</a></li>
+                                <li role="none"><a href="vasistha-prakashan.html" role="menuitem">News letter</a></li>
+                                <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Booklet</a></li>
+                                <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Brochure</a></li>
+                            </ul>
+                        </li>
+                        <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
+                        <li class="has-dropdown" role="none"><a href="career.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Career<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <ul class="vf-submenu" role="menu">
+                                <li role="none"><a href="notice.html" role="menuitem">Notice</a></li>
                             </ul>
                         </li>
                         <!-- <li><a href="contact.html">Contact Us</a></li> -->
-                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer">Utkalitta</a></li>
+                        <li role="none"><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer" role="menuitem">Utkalitta</a></li>
                     </ul>
-                </div>
-                <div>
-                    <div class="vf-header-actions">
-                        <!-- <button class="vf-search-icon vf-icon-search"></button> -->
-                        <a href="contact.html" class="vf-donate-btn">
-                            Contact Us <span class="vf-icon-arrow"></span>
-                        </a>
-                        <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle">☰</button>
-                    </div>
+                </nav>
+                <div class="vf-header-actions">
+                    <!-- <button class="vf-search-icon vf-icon-search"></button> -->
+                    <a href="contact.html" class="vf-donate-btn">
+                        Donate Now<span class="vf-icon-arrow"></span>
+                    </a>
+                    <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
                 </div>
             </div>
         </div>
