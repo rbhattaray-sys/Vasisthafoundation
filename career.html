@@ -348,6 +348,47 @@
             padding: 5px;
         }
 
+        /* Icons using Unicode */
+        .vf-icon-email::before {
+            content: "✉";
+            margin-right: 8px;
+        }
+
+        .vf-icon-phone::before {
+            content: "📞";
+            margin-right: 8px;
+        }
+
+        .vf-icon-facebook::before {
+            content: "f";
+        }
+
+        .vf-icon-twitter::before {
+            content: "t";
+        }
+
+        .vf-icon-linkedin::before {
+            content: "in";
+        }
+
+        .vf-icon-instagram::before {
+            content: "ig";
+        }
+
+        .vf-icon-search::before {
+            content: "🔍";
+        }
+
+        .vf-icon-arrow::before {
+            content: "↗";
+        }
+
+        .vf-icon-dropdown::before {
+            content: "▼";
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+
         /* Hero Section - FIXED */
         .owl-carousel-wrapper {
             position: relative;
@@ -1372,10 +1413,12 @@
         <div class="vf-top-header">
             <div class="vf-top-header-content">
                 <div class="vf-contact-info">
-                    <span><i class="vf-icon-email"></i> vasisthafoundation@gmail.com</span>
+                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email"
+                            style="color: white;" aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
+                    <!-- <span><i class="vf-icon-phone"></i> +91 9876543210</span> -->
                 </div>
                 <div class="vf-top-right">
-                    <span><i class="vf-icon-phone"></i> +91 9090063633</span>
+                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;" aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
                 </div>
             </div>
         </div>
@@ -1454,7 +1497,7 @@
                 <div class="vf-header-actions">
                     <!-- <button class="vf-search-icon vf-icon-search"></button> -->
                     <a href="contact.html" class="vf-donate-btn">
-                        Contact Us <span class="vf-icon-arrow"></span>
+                        Donate Now<span class="vf-icon-arrow"></span>
                     </a>
                     <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle">☰</button>
                 </div>

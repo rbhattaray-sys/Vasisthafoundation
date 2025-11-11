@@ -229,6 +229,13 @@ html {
   display: block;
 }
 
+/* Force same logo sizing even if pages define .vf-logo img differently */
+.vf-logo img {
+  max-height: 64px !important;
+  height: auto !important;
+  width: auto !important;
+}
+
 .vf-nav-container {
   flex: 1 1 auto !important;
   display: flex !important;
@@ -236,13 +243,23 @@ html {
   align-items: center !important;
   background: #746175 !important;
   border-radius: 50px !important;
-  padding: 5px !important;
+  padding: 8px 18px !important;
   overflow: visible !important;
+  min-width: fit-content !important;
+}
+
+/* Ensure first and last nav items are fully visible */
+.vf-nav-menu li:first-child a {
+  margin-left: 0 !important;
+}
+
+.vf-nav-menu li:last-child a {
+  margin-right: 0 !important;
 }
 
 .vf-nav-menu {
   display: flex !important;
-  gap: 6px !important;
+  gap: 5px !important; /* match About Us spacing */
   margin: 0 !important;
   padding: 0 !important;
   align-items: center !important;
@@ -256,9 +273,45 @@ html {
   gap: 12px !important;
 }
 
+/* Simple icon glyphs used in header buttons */
+.vf-icon-arrow::before { content: "↗"; display: inline-block; margin-left: 6px; }
+
+/* Add spacing for email/phone icons in top header */
+.vf-icon-email::before,
+.vf-icon-phone::before {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Unify dropdown symbol style across all pages
+   - Hide inline span icon
+   - Render triangle via ::after like About Us page */
+.vf-nav-menu .has-dropdown > a .vf-icon-dropdown { display: none !important; }
+.vf-nav-menu .has-dropdown > a::after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff; /* white triangle on purple background */
+}
+
 /* Keep nav single-line on larger screens, allow wrap on small screens */
 @media (min-width: 992px) {
   .vf-nav-menu { white-space: nowrap !important; }
+  /* Center nav exactly between logo and actions on desktop */
+  .vf-main-header .vf-main-header-content {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+  }
+  .vf-main-header .site-logo { justify-self: start; }
+  .vf-main-header .vf-header-actions { justify-self: end; }
+  .vf-main-header .vf-nav-container { justify-self: center; flex: 0 0 auto !important; }
 }
 
 @media (max-width: 768px) {
@@ -2072,21 +2125,21 @@ margin-top: -100px; }
 
   /* Ensure nav and actions stay on one line; allow nav to scroll instead of wrapping */
   .vf-main-header-content { align-items: center !important; }
-  .vf-nav-container { max-width: calc(100% - 320px) !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+  .vf-nav-container { max-width: calc(100% - 320px) !important; overflow-x: visible !important; overflow-y: visible !important; }
   .vf-nav-container::-webkit-scrollbar { display: none; }
   .vf-header-actions { display: flex !important; align-items: center !important; gap: 15px !important; flex-shrink: 0 !important; }
   /* Defensive rule for long navs: keep nav items inline and allow scrolling */
   .vf-nav-menu { white-space: nowrap !important; }
 
   /* add a small right gap so the logo doesn't touch nav or decorative shapes */
-  .site-logo { margin-right: 14px; }
+.site-logo { margin-right: 18px; }
 
-  .vf-nav-container { flex: 1 1 auto; display: flex; justify-content: center; align-items: center; }
+.vf-nav-container { flex: 1 1 auto; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
 
   /* more breathing room for desktop nav */
-  .vf-nav-menu { display: inline-flex; gap: 22px; list-style: none; margin: 0; padding: 0; white-space: nowrap; }
+  .vf-nav-menu { display: inline-flex; gap: 5px; list-style: none; margin: 0; padding: 0; white-space: nowrap; }
   .vf-nav-menu > li { display: inline-flex; align-items: center; }
-  .vf-nav-menu > li > a { display: inline-flex; align-items: center; padding: 12px 22px; border-radius: 24px; }
+  .vf-nav-menu > li > a { display: inline-flex; align-items: center; padding: 12px 16px; border-radius: 24px; }
 
   /* separate actions area from nav so Donate/controls don't touch nav pills */
   .vf-header-actions { flex: 0 0 auto; display: flex; align-items: center; gap: 24px; margin-left: 18px; }
