@@ -145,51 +145,7 @@
             border-color: #676678 !important;
         }
 
-        /* Header Styles */
-        .vf-header-wrapper {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.4;
-        }
 
-        .vf-top-header {
-            background: #676678;
-            color: white;
-            padding: 10px 0;
-            font-size: 14px;
-            width: 100%;
-            position: relative;
-            z-index: 1001;
-        }
-
-        .vf-top-header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .vf-contact-info {
-            display: flex;
-            gap: 30px;
-        }
-
-        .vf-contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: white;
-        }
-
-        .vf-top-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
 
         .vf-main-header {
             background: white;
@@ -248,8 +204,9 @@
             color: black !important;
             transform: translateY(-2px);
         }
+
         /* Triangle indicator for dropdown links (only for this page) */
-        .vf-nav-menu .has-dropdown > a::after {
+        .vf-nav-menu .has-dropdown>a::after {
             content: "";
             display: inline-block;
             margin-left: 6px;
@@ -258,7 +215,8 @@
             height: 0;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
-            border-top: 6px solid #fff; /* white triangle for visibility on purple background */
+            border-top: 6px solid #fff;
+            /* white triangle for visibility on purple background */
         }
 
         .vf-submenu {
@@ -313,14 +271,15 @@
             border: none;
             padding: 12px 20px;
             border-radius: 25px;
-            font-weight: bold;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         .vf-donate-btn:hover {
@@ -977,12 +936,13 @@
         <div class="vf-top-header">
             <div class="vf-top-header-content">
                 <div class="vf-contact-info">
-                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email"
-                            style="color: white;" aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
+                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email" style="color: white;"
+                            aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
                     <!-- <span><i class="vf-icon-phone"></i> +91 9876543210</span> -->
                 </div>
                 <div class="vf-top-right">
-                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;" aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
+                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;"
+                            aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
                 </div>
             </div>
         </div>
@@ -993,15 +953,19 @@
 
             <div class="vf-main-header-content">
                 <div class="site-logo">
-                    <a href="index.html" class="text-white" aria-label="Vasistha Foundation Home"><img src="images/logo.png" class="llo" height="80px" alt="Vasistha Foundation Logo"></a>
+                    <a href="index.html" class="text-white" aria-label="Vasistha Foundation Home"><img
+                            src="images/logo.png" class="llo" height="80px" alt="Vasistha Foundation Logo"></a>
                 </div>
 
                 <nav class="vf-nav-container" id="vfNavContainer" role="navigation" aria-label="Main navigation">
 
                     <ul class="vf-nav-menu" role="menubar">
 
+                        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+
                         <li class="has-dropdown" role="none">
-                            <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us
+                                <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
                                 <li role="none"><a href="about.html" role="menuitem">Vasistha foundation</a></li>
                                 <li role="none"><a href="team.html" role="menuitem">Team Vasistha</a></li>
@@ -1009,48 +973,58 @@
                             </ul>
                         </li>
                         <li class="has-dropdown" role="none">
-                            <a href="events.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Events <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <a href="events.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Events
+                                <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
-                                <li role="none"><a href="workshops-seminar.html" role="menuitem">Workshop-Seminar</a></li>
+                                <li role="none"><a href="workshops-seminar.html" role="menuitem">Workshop-Seminar</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="has-dropdown" role="none">
-                            <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Projects<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Projects<span
+                                    class="vf-icon-dropdown" aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
                                 <li role="none"><a href="csr-project.html" role="menuitem">CSR Project</a></li>
                                 <li role="none"><a href="govt-project.html" role="menuitem">Govt. projects</a></li>
                             </ul>
                         </li>
                         <li class="has-dropdown" role="none">
-                            <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">JoinUs<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">JoinUs<span
+                                    class="vf-icon-dropdown" aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
                                 <li role="none"><a href="membership.html" role="menuitem">Membership</a></li>
                                 <li role="none"><a href="volunteer.html" role="menuitem">Volunteer</a></li>
                             </ul>
                         </li>
                         <li class="has-dropdown" role="none">
-                            <a href="our-engagement.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Our Engagement <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                            <a href="our-engagement.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Our
+                                Engagement <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
                                 <li role="none"><a href="our-engagement.html" role="menuitem">Overview</a></li>
                                 <li role="none"><a href="e-bulletin.html" role="menuitem">E-bulletin</a></li>
                             </ul>
                         </li>
-                        <li class="has-dropdown" role="none"><a href="vasistha-prakashan.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Vasistha Prakashan<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                        <li class="has-dropdown" role="none"><a href="vasistha-prakashan.html" role="menuitem"
+                                aria-haspopup="true" aria-expanded="false">Vasistha Prakashan<span
+                                    class="vf-icon-dropdown" aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
-                                <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Books</a></li>
+                                <li role="none"><a href="books.html" role="menuitem">Books</a></li>
                                 <li role="none"><a href="vasistha-prakashan.html" role="menuitem">News letter</a></li>
                                 <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Booklet</a></li>
                                 <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Brochure</a></li>
                             </ul>
                         </li>
                         <li role="none"><a href="gallery.html" role="menuitem">Gallery</a></li>
-                        <li class="has-dropdown" role="none"><a href="career.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Career<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
+                        <li class="has-dropdown" role="none"><a href="career.html" role="menuitem" aria-haspopup="true"
+                                aria-expanded="false">Career<span class="vf-icon-dropdown"
+                                    aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
                                 <li role="none"><a href="notice.html" role="menuitem">Notice</a></li>
                             </ul>
                         </li>
                         <!-- <li><a href="contact.html">Contact Us</a></li> -->
-                        <li role="none"><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer" role="menuitem">Utkalitta</a></li>
+                        <li role="none"><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank"
+                                rel="noopener noreferrer" role="menuitem">Utkalitta</a></li>
                     </ul>
                 </nav>
 
@@ -1059,7 +1033,8 @@
                     <a href="contact.html" class="vf-donate-btn">
                         Donate Now<span class="vf-icon-arrow"></span>
                     </a>
-                    <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+                    <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle" aria-label="Toggle mobile menu"
+                        aria-expanded="false">☰</button>
                 </div>
             </div>
         </div>
@@ -1419,26 +1394,26 @@
                         } else {
                             parentLi.classList.add('active');
                         }
-            }
-    });
-    });
-
-        // Close dropdowns when clicking submenu items
-        const submenuLinks = document.querySelectorAll('.vf-submenu a');
-        submenuLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                // Close the mobile menu after clicking submenu item
-                if (window.innerWidth <= 768) {
-                    const navContainer = document.getElementById('vfNavContainer'); const
-                        mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
-                            navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
-                        } // Close all dropdowns
-                    document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                        item.classList.remove('active');
-                    });
-                }
+                    }
+                });
             });
-        });
+
+            // Close dropdowns when clicking submenu items
+            const submenuLinks = document.querySelectorAll('.vf-submenu a');
+            submenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Close the mobile menu after clicking submenu item
+                    if (window.innerWidth <= 768) {
+                        const navContainer = document.getElementById('vfNavContainer'); const
+                            mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
+                                navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
+                            } // Close all dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                    }
+                });
+            });
         });
     </script>
 

@@ -549,8 +549,8 @@ transition: transform 0.3s;
         }
 
         .vf-top-header-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -791,14 +791,15 @@ transition: transform 0.3s;
             border: none;
             padding: 12px 20px;
             border-radius: 25px;
-            font-weight: bold;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         .vf-donate-btn:hover {
@@ -2043,12 +2044,13 @@ transition: transform 0.3s;
         <div class="vf-top-header">
             <div class="vf-top-header-content">
                 <div class="vf-contact-info">
-                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email"
-                            style="color: white;" aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
+                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email" style="color: white;"
+                            aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
                     <!-- <span><i class="vf-icon-phone"></i> +91 9876543210</span> -->
                 </div>
                 <div class="vf-top-right">
-                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;" aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
+                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;"
+                            aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
                 </div>
             </div>
         </div>
@@ -2066,6 +2068,8 @@ transition: transform 0.3s;
 
                     <ul class="vf-nav-menu">
 
+                        <li><a href="index.html">Home</a></li>
+
                         <li class="has-dropdown">
                             <a href="about.html">About Us <span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -2075,12 +2079,12 @@ transition: transform 0.3s;
 
                             </ul>
                         </li>
-                                                                        <li class="has-dropdown">
-                                                                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
-                                                                            <ul class="vf-submenu">
-                                                                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
-                                                                            </ul>
-                                                                        </li>
+                        <li class="has-dropdown">
+                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown">
                             <a href="#">Projects<span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -2097,17 +2101,17 @@ transition: transform 0.3s;
 
                             </ul>
                         </li>
-                                                <li class="has-dropdown">
-                                                    <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
-                                                    <ul class="vf-submenu">
-                                                        <li><a href="our-engagement.html">Overview</a></li>
-                                                        <li><a href="e-bulletin.html">E-bulletin</a></li>
-                                                    </ul>
-                                                </li>
+                        <li class="has-dropdown">
+                            <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="our-engagement.html">Overview</a></li>
+                                <li><a href="e-bulletin.html">E-bulletin</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
                                 Prakashan<span class="vf-icon-dropdown"></a>
                             <ul class="vf-submenu">
-                                <li><a href="vasistha-prakashan.html">Books</a></li>
+                                <li><a href="books.html">Books</a></li>
                                 <li><a href="vasistha-prakashan.html">News letter</a></li>
                                 <li><a href="vasistha-prakashan.html">Booklet</a></li>
                                 <li><a href="vasistha-prakashan.html">Brochure</a></li>
@@ -2120,7 +2124,8 @@ transition: transform 0.3s;
                             </ul>
                         </li>
                         <!-- <li><a href="contact.html">Contact Us</a></li> -->
-                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer">Utkalitta</a></li>
+                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Utkalitta</a></li>
                     </ul>
                 </div>
 
@@ -2465,19 +2470,6 @@ transition: transform 0.3s;
         </div>
     </div>
 
-
-    <div class="site-section">
-        <div class="container">
-
-            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
-                <div class="">
-                    <h2 class="text-cursive">Helping the Homeless, Hungry, and Hurtings Children</h2>
-                </div>
-                <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
-            </div>
-
-        </div>
-    </div>
 
     <footer class="vf-footer-wrapper">
         <div class="vf-footer-container">
@@ -3287,44 +3279,47 @@ transition: transform 0.3s;
             mobileDropdowns.forEach(dropdown => {
                 dropdown.addEventListener('click', function (e) {
                     // Only prevent default on mobile
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            const parentLi = this.parentElement;
-                            const isActive = parentLi.classList.contains('active');
-                            // Close all other dropdowns
-                            document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                                if (item !== parentLi) {
-                                    item.classList.remove('active');
-                                }
-                            });
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const parentLi = this.parentElement;
+                        const isActive = parentLi.classList.contains('active');
 
-                            // Toggle current dropdown
-                            if (isActive) {
-                                parentLi.classList.remove('active');
-                            } else {
-                                parentLi.classList.add('active');
+                        // Close all other dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            if (item !== parentLi) {
+                                item.classList.remove('active');
                             }
-                        }
-            }
-    });
-    });
+                        });
 
-        // Close dropdowns when clicking submenu items
-        const submenuLinks = document.querySelectorAll('.vf-submenu a');
-        submenuLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                // Close the mobile menu after clicking submenu item
-                if (window.innerWidth <= 768) {
-                    const navContainer = document.getElementById('vfNavContainer'); const
-                        mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
-                            navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
-                        } // Close all dropdowns
-                    document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                        item.classList.remove('active');
-                    });
-                }
+                        // Toggle current dropdown
+                        if (isActive) {
+                            parentLi.classList.remove('active');
+                        } else {
+                            parentLi.classList.add('active');
+                        }
+                    }
+                });
             });
-        });
+
+            // Close dropdowns when clicking submenu items
+            const submenuLinks = document.querySelectorAll('.vf-submenu a');
+            submenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 768) {
+                        const navContainer = document.getElementById('vfNavContainer');
+                        const mobileToggle = document.getElementById('vfMobileMenuToggle');
+
+                        if (navContainer && mobileToggle) {
+                            navContainer.classList.remove('vf-active');
+                            mobileToggle.textContent = '☰';
+                        }
+
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                    }
+                });
+            });
         });
     </script>
     <script src="js/main.js"></script>
