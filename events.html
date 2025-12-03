@@ -554,12 +554,36 @@
             width: 40px;
             height: 40px;
         }
+
         /* Ensure header elements align on one line and logo doesn't force extra height */
-        .vf-main-header-content { align-items: center; }
-        .vf-logo img, .site-logo img, img.llo { max-height: 64px !important; height: auto !important; width: auto !important; }
-        .vf-nav-container { max-width: calc(100% - 320px); overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        .vf-nav-container::-webkit-scrollbar { display: none; }
-        .vf-header-actions { display:flex; align-items:center; gap:15px; flex-shrink:0; }
+        .vf-main-header-content {
+            align-items: center;
+        }
+
+        .vf-logo img,
+        .site-logo img,
+        img.llo {
+            max-height: 64px !important;
+            height: auto !important;
+            width: auto !important;
+        }
+
+        .vf-nav-container {
+            max-width: calc(100% - 320px);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .vf-nav-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .vf-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
 
         .site-footer p {
             color: white !important;
@@ -666,14 +690,15 @@
             border: none;
             padding: 12px 20px;
             border-radius: 25px;
-            font-weight: bold;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         /* .vf-donate-btn:hover {
@@ -1402,6 +1427,8 @@ transform: translateY(-2px);
 
                     <ul class="vf-nav-menu">
 
+                        <li><a href="index.html">Home</a></li>
+
                         <li class="has-dropdown">
                             <a href="about.html">About Us <span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -1411,12 +1438,12 @@ transform: translateY(-2px);
 
                             </ul>
                         </li>
-                                                                        <li class="has-dropdown">
-                                                                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
-                                                                            <ul class="vf-submenu">
-                                                                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
-                                                                            </ul>
-                                                                        </li>
+                        <li class="has-dropdown">
+                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown">
                             <a href="#">Projects<span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -1433,17 +1460,17 @@ transform: translateY(-2px);
 
                             </ul>
                         </li>
-                                                <li class="has-dropdown">
-                                                    <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
-                                                    <ul class="vf-submenu">
-                                                        <li><a href="our-engagement.html">Overview</a></li>
-                                                        <li><a href="e-bulletin.html">E-bulletin</a></li>
-                                                    </ul>
-                                                </li>
+                        <li class="has-dropdown">
+                            <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="our-engagement.html">Overview</a></li>
+                                <li><a href="e-bulletin.html">E-bulletin</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
                                 Prakashan<span class="vf-icon-dropdown"></a>
                             <ul class="vf-submenu">
-                                <li><a href="vasistha-prakashan.html">Books</a></li>
+                                <li><a href="books.html">Books</a></li>
                                 <li><a href="vasistha-prakashan.html">News letter</a></li>
                                 <li><a href="vasistha-prakashan.html">Booklet</a></li>
                                 <li><a href="vasistha-prakashan.html">Brochure</a></li>
@@ -1456,7 +1483,8 @@ transform: translateY(-2px);
                             </ul>
                         </li>
                         <!-- <li><a href="contact.html">Contact Us</a></li> -->
-                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer">Utkalitta</a></li>
+                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Utkalitta</a></li>
                     </ul>
                 </div>
 
@@ -1501,8 +1529,8 @@ transform: translateY(-2px);
 
             <div class="site-section container vasistha-events-container">
                 <div class="vasistha-events-header">
-                    <div class="vasistha-events-badge">Event Schedule 🔥</div>
-                    <h1 class="vasistha-events-title">Upcoming Events</h1>
+
+                    <h1 class="vasistha-events-title">Latest Events</h1>
                     <p class="vasistha-events-subtitle">
                         Join us for impactful community engagements, educational workshops, and awareness programs
                         designed
@@ -1510,34 +1538,13 @@ transform: translateY(-2px);
                     </p>
                 </div>
 
-                <div class="vasistha-event-schedule">
-                    <div class="vasistha-schedule-header">
-                        <h2 class="vasistha-schedule-title">Event Calendar</h2>
-                        <div class="vasistha-schedule-days">
-                            <div class="vasistha-schedule-day">
-                                <div class="vasistha-day-date">25/07/2025</div>
-                                <div class="vasistha-day-name">Friday</div>
-                                <div class="vasistha-day-number">DAY 01</div>
-                            </div>
-                            <div class="vasistha-schedule-day vasistha-active">
-                                <div class="vasistha-day-date">26/07/2025</div>
-                                <div class="vasistha-day-name">Saturday</div>
-                                <div class="vasistha-day-number">DAY 02</div>
-                            </div>
-                            <div class="vasistha-schedule-day">
-                                <div class="vasistha-day-date">27/07/2025</div>
-                                <div class="vasistha-day-name">Sunday</div>
-                                <div class="vasistha-day-number">DAY 03</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
                 <div class="vasistha-events-grid">
 
 
                     <div class="vf-card">
-                        <img src="images/image1.png" alt="Environmental Awareness">
+                        <img src="images/photo_018.jpg" alt="Educational Awareness">
                         <div class="vasistha-event-content">
                             <div class="vasistha-event-location">Puri, Odisha</div>
                             <h3 class="vasistha-event-title">Educational Awareness Program</h3>
@@ -1557,7 +1564,7 @@ transform: translateY(-2px);
                         </div>
                     </div>
                     <div class="vf-card">
-                        <img src="images/env2.png" alt="Environmental Awareness">
+                        <img src="images/photo_029.jpg" alt="Environmental Awareness">
                         <div class="vasistha-event-content">
                             <div class="vasistha-event-location">Gundicha Vihar, Puri</div>
                             <h3 class="vasistha-event-title">Environmental Awareness Seminar</h3>
@@ -1576,7 +1583,7 @@ transform: translateY(-2px);
                         </div>
                     </div>
                     <div class="vf-card">
-                        <img src="images/covid.png" alt="Environmental Awareness">
+                        <img src="images/photo_025.jpg" alt="Health & Hygiene">
                         <div class="vasistha-event-content">
 
                             <div class="vasistha-event-location">Community Center, Puri</div>
@@ -1595,7 +1602,7 @@ transform: translateY(-2px);
                         </div>
                     </div>
                     <div class="vf-card">
-                        <img src="images/project_udaan_children.jpg" alt="Environmental Awareness">
+                        <img src="images/photo_031.jpg" alt="Career Mentorship">
                         <div class="vasistha-event-content">
                             <div class="vasistha-event-location">Vasistha Foundation Office</div>
                             <h3 class="vasistha-event-title">Career Mentorship & Counseling</h3>
@@ -1613,7 +1620,7 @@ transform: translateY(-2px);
                         </div>
                     </div>
                     <div class="vf-card">
-                        <img src="images/agree.png" alt="Environmental Awareness">
+                        <img src="images/Agree Event.jpg" alt="Agricultural Development">
                         <div class="vasistha-event-content">
                             <div class="vasistha-event-location">Rural Areas, Puri District</div>
                             <h3 class="vasistha-event-title">Agricultural Development Workshop</h3>
@@ -1631,7 +1638,7 @@ transform: translateY(-2px);
                         </div>
                     </div>
                     <div class="vf-card">
-                        <img src="images/parents.png" alt="Environmental Awareness">
+                        <img src="images/photo_049.jpeg" alt="Parent-Student Session">
                         <div class="vasistha-event-content">
                             <div class="vasistha-event-location">Sarbodaya Nagar, Puri</div>
                             <h3 class="vasistha-event-title">Parent-Student Awareness Session</h3>
@@ -1668,19 +1675,6 @@ transform: translateY(-2px);
 
 
 
-
-    <div class="site-section">
-        <div class="container">
-
-            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
-                <div class="">
-                    <h2 class="text-cursive">Helping the Homeless, Hungry, and Hurtings Children</h2>
-                </div>
-                <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
-            </div>
-
-        </div>
-    </div>
 
     <footer class="vf-footer-wrapper">
         <div class="vf-footer-container">
@@ -2226,9 +2220,9 @@ transform: translateY(-2px);
                             parentLi.classList.add('active');
                         }
                     }
-            }
+                }
     });
-    });
+        });
 
         // Close dropdowns when clicking submenu items
         const submenuLinks = document.querySelectorAll('.vf-submenu a');

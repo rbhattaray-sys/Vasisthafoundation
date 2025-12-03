@@ -175,8 +175,8 @@
         }
 
         .vf-top-header-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -258,8 +258,9 @@
             color: black !important;
             transform: translateY(-2px);
         }
+
         /* Triangle indicator for dropdown links (only for this page) */
-        .vf-nav-menu .has-dropdown > a::after {
+        .vf-nav-menu .has-dropdown>a::after {
             content: "";
             display: inline-block;
             margin-left: 6px;
@@ -268,7 +269,8 @@
             height: 0;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
-            border-top: 6px solid #fff; /* white triangle for visibility on purple background */
+            border-top: 6px solid #fff;
+            /* white triangle for visibility on purple background */
         }
 
         .vf-submenu {
@@ -323,14 +325,15 @@
             border: none;
             padding: 12px 20px;
             border-radius: 25px;
-            font-weight: bold;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         .vf-donate-btn:hover {
@@ -1413,12 +1416,13 @@
         <div class="vf-top-header">
             <div class="vf-top-header-content">
                 <div class="vf-contact-info">
-                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email"
-                            style="color: white;" aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
+                    <span><a href="mailto:vasisthafoundation@gmail.com" class="vf-icon-email" style="color: white;"
+                            aria-label="Email Vasistha Foundation">vasisthafoundation@gmail.com</a></span>
                     <!-- <span><i class="vf-icon-phone"></i> +91 9876543210</span> -->
                 </div>
                 <div class="vf-top-right">
-                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;" aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
+                    <span><a href="tel:9090063633" class="vf-icon-phone" style="color: white;"
+                            aria-label="Call Vasistha Foundation"> +91 9090063633</a></span>
                 </div>
             </div>
         </div>
@@ -1436,6 +1440,8 @@
 
                     <ul class="vf-nav-menu">
 
+                        <li><a href="index.html">Home</a></li>
+
                         <li class="has-dropdown">
                             <a href="about.html">About Us <span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -1445,12 +1451,12 @@
 
                             </ul>
                         </li>
-                                                                        <li class="has-dropdown">
-                                                                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
-                                                                            <ul class="vf-submenu">
-                                                                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
-                                                                            </ul>
-                                                                        </li>
+                        <li class="has-dropdown">
+                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown">
                             <a href="#">Projects<span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -1467,17 +1473,17 @@
 
                             </ul>
                         </li>
-                                                <li class="has-dropdown">
-                                                    <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
-                                                    <ul class="vf-submenu">
-                                                        <li><a href="our-engagement.html">Overview</a></li>
-                                                        <li><a href="e-bulletin.html">E-bulletin</a></li>
-                                                    </ul>
-                                                </li>
+                        <li class="has-dropdown">
+                            <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="our-engagement.html">Overview</a></li>
+                                <li><a href="e-bulletin.html">E-bulletin</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
                                 Prakashan<span class="vf-icon-dropdown"></a>
                             <ul class="vf-submenu">
-                                <li><a href="vasistha-prakashan.html">Books</a></li>
+                                <li><a href="books.html">Books</a></li>
                                 <li><a href="vasistha-prakashan.html">News letter</a></li>
                                 <li><a href="vasistha-prakashan.html">Booklet</a></li>
                                 <li><a href="vasistha-prakashan.html">Brochure</a></li>
@@ -1490,7 +1496,8 @@
                             </ul>
                         </li>
                         <!-- <li><a href="contact.html">Contact Us</a></li> -->
-                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer">Utkalitta</a></li>
+                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Utkalitta</a></li>
                     </ul>
                 </div>
 
@@ -1918,9 +1925,9 @@
                             parentLi.classList.add('active');
                         }
                     }
-            }
+                }
     });
-    });
+        });
 
         // Close dropdowns when clicking submenu items
         const submenuLinks = document.querySelectorAll('.vf-submenu a');

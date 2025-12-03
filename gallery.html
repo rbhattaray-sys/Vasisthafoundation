@@ -805,14 +805,15 @@
             border: none;
             padding: 12px 20px;
             border-radius: 25px;
-            font-weight: bold;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         .vf-donate-btn:hover {
@@ -1553,7 +1554,9 @@
 
                 <nav class="vf-nav-container" id="vfNavContainer" role="navigation" aria-label="Main navigation">
 
-                    <ul class="vf-nav-menu" role="menubar">
+          <ul class="vf-nav-menu" role="menubar">
+
+            <li role="none"><a href="index.html" role="menuitem">Home</a></li>
 
                         <li class="has-dropdown" role="none">
                             <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us <span class="vf-icon-dropdown" aria-hidden="true"></span></a>
@@ -1592,7 +1595,7 @@
                         </li>
                         <li class="has-dropdown" role="none"><a href="vasistha-prakashan.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Vasistha Prakashan<span class="vf-icon-dropdown" aria-hidden="true"></span></a>
                             <ul class="vf-submenu" role="menu">
-                                <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Books</a></li>
+                                <li role="none"><a href="books.html" role="menuitem">Books</a></li>
                                 <li role="none"><a href="vasistha-prakashan.html" role="menuitem">News letter</a></li>
                                 <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Booklet</a></li>
                                 <li role="none"><a href="vasistha-prakashan.html" role="menuitem">Brochure</a></li>
@@ -1680,23 +1683,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <div class="site-section">
-        <div class="container">
-
-            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
-                <div class="">
-                    <h2 class="text-cursive">Helping the Homeless, Hungry, and Hurtings Children</h2>
-                </div>
-                <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
-            </div>
-
-        </div>
-    </div>
-
     <footer class="vf-footer-wrapper">
         <div class="vf-footer-container">
 
