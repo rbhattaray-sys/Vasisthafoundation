@@ -1442,7 +1442,7 @@
         }
 
         .vp-section {
-            padding: 60px 20px;
+            padding: 20px 20px 60px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -1477,7 +1477,7 @@
             background-position: center;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-end;
             padding: 20px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
@@ -1548,6 +1548,66 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        /* Image Modal Styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal.active {
+            display: flex;
+        }
+
+        .modal-content-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10001;
+        }
+
+        .modal-close:hover {
+            color: #ccc;
+        }
+
+        .vp-card {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -1646,7 +1706,7 @@
 
                 <div class="vf-header-actions">
                     <!-- <button class="vf-search-icon vf-icon-search"></button> -->
-                    <a href="contact.html" class="vf-donate-btn">
+                    <a href="images/vasistha.%20Qr%20code.jpg" class="vf-donate-btn" data-fancybox="donate-qr">
                         Donate Now<span class="vf-icon-arrow"></span>
                     </a>
                     <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle">☰</button>
@@ -1701,36 +1761,26 @@
 
                 <div class="vp-grid">
 
-                    <div class="vp-card" style="background-image: url('images/img_1.jpg');">
-                        <div>
-                            <h3>Book Title 1</h3>
-                            <p>Author Name</p>
-                        </div>
-                        <a href="#" class="vp-btn">Read More</a>
+                    <div class="vp-card" style="background-image: url('images/Amiti Kainhki.jpg');"
+                        onclick="openImageModal('images/Amiti Kainhki.jpg')" data-image="images/Amiti Kainhki.jpg">
+                        <a href="#" class="vp-btn" onclick="event.stopPropagation();">Read More</a>
                     </div>
 
-                    <div class="vp-card" style="background-image: url('images/img_2.jpg');">
-                        <div>
-                            <h3>Book Title 2</h3>
-                            <p>Author Name</p>
-                        </div>
-                        <a href="#" class="vp-btn">Read More</a>
+                    <div class="vp-card" style="background-image: url('images/MANTHAN COVER.jpg.jpg');"
+                        onclick="openImageModal('images/MANTHAN COVER.jpg.jpg')"
+                        data-image="images/MANTHAN COVER.jpg.jpg">
+                        <a href="https://drive.google.com/file/d/1h4uXmrC4vXiOUgyveEalrvXZEGgsm3yj/view?usp=sharing"
+                            target="_blank" class="vp-btn" onclick="event.stopPropagation();">Read More</a>
                     </div>
 
-                    <div class="vp-card" style="background-image: url('images/img_3.jpg');">
-                        <div>
-                            <h3>Book Title 3</h3>
-                            <p>Author Name</p>
-                        </div>
-                        <a href="#" class="vp-btn">Read More</a>
+                    <div class="vp-card" style="background-image: url('images/img_3.jpg');"
+                        onclick="openImageModal('images/img_3.jpg')" data-image="images/img_3.jpg">
+                        <a href="#" class="vp-btn" onclick="event.stopPropagation();">Read More</a>
                     </div>
 
-                    <div class="vp-card" style="background-image: url('images/hero_1.jpg');">
-                        <div>
-                            <h3>Book Title 4</h3>
-                            <p>Author Name</p>
-                        </div>
-                        <a href="#" class="vp-btn">Read More</a>
+                    <div class="vp-card" style="background-image: url('images/hero_1.jpg');"
+                        onclick="openImageModal('images/hero_1.jpg')" data-image="images/hero_1.jpg">
+                        <a href="#" class="vp-btn" onclick="event.stopPropagation();">Read More</a>
                     </div>
 
                 </div>
@@ -2218,6 +2268,34 @@
                 // Optional: Add controls for debugging
                 window.vfRocketAnimation = rocketAnimation;
             }, 500);
+        });
+    </script>
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="modal-close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content-img" id="modalImage">
+    </div>
+
+    <script>
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Enable scrolling
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeImageModal();
+            }
         });
     </script>
 </body>

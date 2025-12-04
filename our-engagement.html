@@ -1568,12 +1568,12 @@ transition: transform 0.3s;
 
                             </ul>
                         </li>
-                                                                        <li class="has-dropdown">
-                                                                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
-                                                                            <ul class="vf-submenu">
-                                                                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
-                                                                            </ul>
-                                                                        </li>
+                        <li class="has-dropdown">
+                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown">
                             <a href="#">Projects<span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -1590,13 +1590,13 @@ transition: transform 0.3s;
 
                             </ul>
                         </li>
-                                                <li class="has-dropdown">
-                                                    <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
-                                                    <ul class="vf-submenu">
-                                                        <li><a href="our-engagement.html">Overview</a></li>
-                                                        <li><a href="e-bulletin.html">E-bulletin</a></li>
-                                                    </ul>
-                                                </li>
+                        <li class="has-dropdown">
+                            <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="our-engagement.html">Overview</a></li>
+                                <li><a href="e-bulletin.html">E-bulletin</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
                                 Prakashan<span class="vf-icon-dropdown"></a>
                             <ul class="vf-submenu">
@@ -1613,13 +1613,14 @@ transition: transform 0.3s;
                             </ul>
                         </li>
                         <!-- <li><a href="contact.html">Contact Us</a></li> -->
-                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer">Utkalitta</a></li>
+                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Utkalitta</a></li>
                     </ul>
                 </div>
 
                 <div class="vf-header-actions">
                     <!-- <button class="vf-search-icon vf-icon-search"></button> -->
-                    <a href="contact.html" class="vf-donate-btn">
+                    <a href="images/vasistha.%20Qr%20code.jpg" class="vf-donate-btn" data-fancybox="donate-qr">
                         Donate Now<span class="vf-icon-arrow"></span>
                     </a>
                     <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle">☰</button>
@@ -1675,45 +1676,42 @@ transition: transform 0.3s;
 
                 <div class="vf-engagement-grid">
                     <div class="vf-engagement-card">
-                        <h3>Grassroots Interaction</h3>
-                        <p>We regularly conduct workshops, seminars, and surveys to understand the real needs of local
-                            communities
-                            across Odisha. Our volunteers ensure every voice is heard.</p>
+                        <h3>Capacity Building & Institutional Strengthening</h3>
+                        <p>Training and up-skilling of elected representatives, municipal and panchayat officials,
+                            school administrators, community leaders, and other local stakeholders.</p>
                     </div>
 
                     <div class="vf-engagement-card">
-                        <h3>Skill-Building Programs</h3>
-                        <p>Hands-on sessions and vocational training empower youth and women with employable skills. Our
-                            team works
-                            with educators and trainers for impact-oriented delivery.</p>
+                        <h3>Education, NEP Implementation & Community Learning</h3>
+                        <p>Joint initiatives to support National Education Policy (NEP) implementation, teacher
+                            development, school–community linkages, and learning outcomes enhancement.</p>
                     </div>
 
                     <div class="vf-engagement-card">
-                        <h3>Collaborations & MOU</h3>
-                        <p>We partner with schools, healthcare providers, and NGOs under formal MOUs to broaden our
-                            reach and ensure
-                            sustainable change through collective action.</p>
+                        <h3>Inclusive Governance, Legal Aid & Social Justice</h3>
+                        <p>Projects to advance inclusive participation, access to entitlements, legal aid clinics,
+                            advocacy for marginalised groups (women, the elderly, differently-abled), and mechanisms for
+                            citizen engagement.</p>
                     </div>
 
                     <div class="vf-engagement-card">
-                        <h3>Volunteer Engagement</h3>
-                        <p>From college students to local professionals, our volunteer network is active in supporting
-                            on-ground
-                            projects, health camps, and educational drives.</p>
+                        <h3>Livelihoods, MSME & Agrarian Resilience</h3>
+                        <p>Programs to strengthen local livelihoods, support MSME incubation, farmer resilience
+                            (including climate-sensitive practices), market linkages, and enterprise development.</p>
                     </div>
 
                     <div class="vf-engagement-card">
-                        <h3>Awareness Campaigns</h3>
-                        <p>We run awareness campaigns on hygiene, climate change, and sustainable agriculture using
-                            local media,
-                            events, and street plays to educate rural populations.</p>
+                        <h3>Sustainable Urban & Rural Development, Environment & Disaster Resilience</h3>
+                        <p>Joint work on climate-responsive planning, renewable energy adoption, waste & water
+                            management, urban poverty alleviation, and disaster preparedness/response at local levels.
+                        </p>
                     </div>
 
                     <div class="vf-engagement-card">
-                        <h3>Feedback & Follow-up</h3>
-                        <p>We don’t stop at delivery. Regular follow-up visits and community feedback loops help us
-                            measure success,
-                            adapt strategies, and build lasting trust.</p>
+                        <h3>Technology, Digital Governance & Future Skills</h3>
+                        <p>Collaboration on digital transformation of local services, e-governance, community digital
+                            literacy, skilling in future-oriented technologies (as applicable), and technology
+                            demonstrations.</p>
                     </div>
                 </div>
             </section>
@@ -1795,44 +1793,44 @@ transition: transform 0.3s;
             mobileDropdowns.forEach(dropdown => {
                 dropdown.addEventListener('click', function (e) {
                     // Only prevent default on mobile
-                                if (window.innerWidth <= 768) {
-                                    e.preventDefault();
-                                    const parentLi = this.parentElement;
-                                    const isActive = parentLi.classList.contains('active');
-                                    // Close all other dropdowns
-                                    document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                                        if (item !== parentLi) {
-                                            item.classList.remove('active');
-                                        }
-                                    });
-
-                                    // Toggle current dropdown
-                                    if (isActive) {
-                                        parentLi.classList.remove('active');
-                                    } else {
-                                        parentLi.classList.add('active');
-                                    }
-                                }
-                            });
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const parentLi = this.parentElement;
+                        const isActive = parentLi.classList.contains('active');
+                        // Close all other dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            if (item !== parentLi) {
+                                item.classList.remove('active');
+                            }
                         });
 
-        // Close dropdowns when clicking submenu items
-        const submenuLinks = document.querySelectorAll('.vf-submenu a');
-        submenuLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                // Close the mobile menu after clicking submenu item
-                if (window.innerWidth <= 768) {
-                    const navContainer = document.getElementById('vfNavContainer'); const
-                        mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
-                            navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
-                        } // Close all dropdowns
-                    document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                        item.classList.remove('active');
-                    });
-                }
+                        // Toggle current dropdown
+                        if (isActive) {
+                            parentLi.classList.remove('active');
+                        } else {
+                            parentLi.classList.add('active');
+                        }
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking submenu items
+            const submenuLinks = document.querySelectorAll('.vf-submenu a');
+            submenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Close the mobile menu after clicking submenu item
+                    if (window.innerWidth <= 768) {
+                        const navContainer = document.getElementById('vfNavContainer'); const
+                            mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
+                                navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
+                            } // Close all dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                    }
+                });
             });
         });
-            });
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
