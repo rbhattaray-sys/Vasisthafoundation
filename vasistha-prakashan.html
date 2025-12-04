@@ -1594,12 +1594,12 @@
 
                             </ul>
                         </li>
-                                                                        <li class="has-dropdown">
-                                                                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
-                                                                            <ul class="vf-submenu">
-                                                                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
-                                                                            </ul>
-                                                                        </li>
+                        <li class="has-dropdown">
+                            <a href="events.html">Events <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="workshops-seminar.html">Workshop-Seminar</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown">
                             <a href="#">Projects<span class="vf-icon-dropdown"></span></a>
                             <ul class="vf-submenu">
@@ -1616,13 +1616,13 @@
 
                             </ul>
                         </li>
-                                                <li class="has-dropdown">
-                                                    <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
-                                                    <ul class="vf-submenu">
-                                                        <li><a href="our-engagement.html">Overview</a></li>
-                                                        <li><a href="e-bulletin.html">E-bulletin</a></li>
-                                                    </ul>
-                                                </li>
+                        <li class="has-dropdown">
+                            <a href="our-engagement.html">Our Engagement <span class="vf-icon-dropdown"></span></a>
+                            <ul class="vf-submenu">
+                                <li><a href="our-engagement.html">Overview</a></li>
+                                <li><a href="e-bulletin.html">E-bulletin</a></li>
+                            </ul>
+                        </li>
                         <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
                                 Prakashan<span class="vf-icon-dropdown"></a>
                             <ul class="vf-submenu">
@@ -1639,13 +1639,14 @@
                             </ul>
                         </li>
                         <!-- <li><a href="contact.html">Contact Us</a></li> -->
-                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank" rel="noopener noreferrer">Utkalitta</a></li>
+                        <li><a href="https://utkalitaa-gravitones-com.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">Utkalitta</a></li>
                     </ul>
                 </div>
 
                 <div class="vf-header-actions">
                     <!-- <button class="vf-search-icon vf-icon-search"></button> -->
-                    <a href="contact.html" class="vf-donate-btn">
+                    <a href="images/vasistha.%20Qr%20code.jpg" class="vf-donate-btn" data-fancybox="donate-qr">
                         Donate Now<span class="vf-icon-arrow"></span>
                     </a>
                     <button class="vf-mobile-menu-toggle" id="vfMobileMenuToggle">☰</button>
@@ -1702,15 +1703,19 @@
 
                 <div class="vp-grid">
 
-                    <div class="vp-card span-2" style="background-image: url('images/agree.png');">
+                    <div class="vp-card span-2"
+                        style="background-image: url('images/Vasistha_Foundation_Brochure.jpg'); cursor: pointer;"
+                        onclick="window.open('https://drive.google.com/file/d/1q_ZS3A_ZL5R0LSLN1bmaokV8VE-2QBxc/view', '_blank')">
                         <div>
-                            <h3>Empower – Jan 2025</h3>
-                            <p>Grassroots impact in Odisha</p>
+                            <h3>Vasistha Foundation Brochure</h3>
+                            <p>Learn about our mission and impact</p>
                         </div>
-                        <a href="files/empower-jan2025.pdf" class="vp-btn" download>Download PDF</a>
+                        <a href="https://drive.google.com/file/d/1q_ZS3A_ZL5R0LSLN1bmaokV8VE-2QBxc/view" class="vp-btn"
+                            target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">View
+                            Brochure</a>
                     </div>
 
-                    <div class="vp-card" style="background-image: url('images/healthh.png');">
+                    <div class="vp-card" style="background-image: url('images/healthh.jpg');">
                         <div>
                             <h3>Quarterly Newsletter</h3>
                             <p>Latest project snapshots</p>
@@ -1734,7 +1739,7 @@
                         <a href="files/farming-guide.pdf" class="vp-btn" download>Download PDF</a>
                     </div>
 
-                    <div class="vp-card" style="background-image: url('images/healthh.png');">
+                    <div class="vp-card" style="background-image: url('images/healthh.jpg');">
                         <div>
                             <h3>Booklet on Hygiene</h3>
                             <p>Child health & habits</p>
@@ -1934,44 +1939,44 @@
             mobileDropdowns.forEach(dropdown => {
                 dropdown.addEventListener('click', function (e) {
                     // Only prevent default on mobile
-                                if (window.innerWidth <= 768) {
-                                    e.preventDefault();
-                                    const parentLi = this.parentElement;
-                                    const isActive = parentLi.classList.contains('active');
-                                    // Close all other dropdowns
-                                    document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                                        if (item !== parentLi) {
-                                            item.classList.remove('active');
-                                        }
-                                    });
-
-                                    // Toggle current dropdown
-                                    if (isActive) {
-                                        parentLi.classList.remove('active');
-                                    } else {
-                                        parentLi.classList.add('active');
-                                    }
-                                }
-                            });
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const parentLi = this.parentElement;
+                        const isActive = parentLi.classList.contains('active');
+                        // Close all other dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            if (item !== parentLi) {
+                                item.classList.remove('active');
+                            }
                         });
 
-        // Close dropdowns when clicking submenu items
-        const submenuLinks = document.querySelectorAll('.vf-submenu a');
-        submenuLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                // Close the mobile menu after clicking submenu item
-                if (window.innerWidth <= 768) {
-                    const navContainer = document.getElementById('vfNavContainer'); const
-                        mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
-                            navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
-                        } // Close all dropdowns
-                    document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                        item.classList.remove('active');
-                    });
-                }
+                        // Toggle current dropdown
+                        if (isActive) {
+                            parentLi.classList.remove('active');
+                        } else {
+                            parentLi.classList.add('active');
+                        }
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking submenu items
+            const submenuLinks = document.querySelectorAll('.vf-submenu a');
+            submenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Close the mobile menu after clicking submenu item
+                    if (window.innerWidth <= 768) {
+                        const navContainer = document.getElementById('vfNavContainer'); const
+                            mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
+                                navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
+                            } // Close all dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                    }
+                });
             });
         });
-            });
     </script>
     <script>
         // Mobile menu toggle - Vasistha Foundation Header
