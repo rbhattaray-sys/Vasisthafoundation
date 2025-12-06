@@ -58,12 +58,7 @@
                 margin: 2px 5px;
             }
 
-            /* Add click handler for mobile dropdowns */
-            /* .vf-nav-menu .has-dropdown > a::after {
-content: ' ▼';
-font-size: 10px;
-transition: transform 0.3s;
-} */
+
 
             .vf-nav-menu .has-dropdown.active>a::after {
                 transform: rotate(180deg);
@@ -1437,64 +1432,94 @@ transition: transform 0.3s;
             }
         }
 
-        .vf-container {
+        .vp-section {
+            padding: 20px 20px 60px;
             max-width: 1200px;
-            margin: auto;
-            padding: 40px 20px;
+            margin: 0 auto;
         }
 
-        .vf-page-title {
-            font-size: 36px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 20px;
+        .vp-heading {
+            font-size: 2.5rem;
             color: #776176;
-        }
-
-        .vf-page-subtitle {
-            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
             text-align: center;
-            color: #555;
-            margin-bottom: 50px;
         }
 
-        .vf-engagement-grid {
+        .vp-subheading {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .vp-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 20px;
         }
 
-        .vf-engagement-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        .vp-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
-        .vf-engagement-card:hover {
+        .vp-card:hover {
             transform: translateY(-5px);
         }
 
-        .vf-engagement-card h3 {
-            font-size: 22px;
-            color: #676678;
-            margin-bottom: 10px;
+        .vp-card h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: bold;
+            color: white !important;
         }
 
-        .vf-engagement-card p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #444;
+        .vp-card p {
+            font-size: 0.9rem;
+            margin: 5px 0 10px;
+        }
+
+        .vp-btn {
+            background: #746175;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            align-self: flex-start;
+        }
+
+        .vp-btn:hover {
+            background: #676678;
+        }
+
+        /* Layout tweaks */
+        .vp-card.span-2 {
+            grid-column: span 2;
         }
 
         @media (max-width: 768px) {
-            .vf-page-title {
-                font-size: 28px;
+            .vp-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
             }
 
-            .vf-page-subtitle {
-                font-size: 16px;
+            .vp-card.span-2 {
+                grid-column: span 1;
             }
         }
     </style>
@@ -1514,6 +1539,66 @@ transition: transform 0.3s;
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        /* Image Modal Styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal.active {
+            display: flex;
+        }
+
+        .modal-content-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10001;
+        }
+
+        .modal-close:hover {
+            color: #ccc;
+        }
+
+        .vp-card {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -1538,6 +1623,7 @@ transition: transform 0.3s;
         <!-- Main Header -->
         <div class="vf-main-header">
             <!-- Rocket Animation Container -->
+
 
             <div class="vf-main-header-content">
                 <div class="site-logo">
@@ -1588,8 +1674,8 @@ transition: transform 0.3s;
                                 <li><a href="e-bulletin.html">E-bulletin</a></li>
                             </ul>
                         </li>
-                        <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha
-                                Prakashan<span class="vf-icon-dropdown"></a>
+                        <li class="has-dropdown"><a href="vasistha-prakashan.html">Vasistha Prakashan<span
+                                    class="vf-icon-dropdown"></a>
                             <ul class="vf-submenu">
                                 <li><a href="books.html">Books</a></li>
                                 <li><a href="newsletter.html">News letter</a></li>
@@ -1626,7 +1712,7 @@ transition: transform 0.3s;
 
 
         <div class="box-92819">
-            <h1 class="text-white mb-3">Our-Engagement</h1>
+            <h1 class="text-white mb-3">Booklet</h1>
             <!-- <p class="lead text-white">Transforming lives with action, care, and collaboration.</p> -->
         </div>
 
@@ -1659,51 +1745,25 @@ transition: transform 0.3s;
 
 
 
-            <!-- Vasistha Projects Section with Tabs, Cards (4 Each), and Animated Stats -->
-            <!-- PAGE CONTENT -->
-            <section class="vf-container">
-                <h2 class="vf-page-title">Community Engagement</h2>
-                <p class="vf-page-subtitle">How we actively connect, support, and grow with the people we serve</p>
+            <!-- Books Section -->
+            <section class="vp-section">
+                <h2 class="vp-heading">Booklet</h2>
+                <p class="vp-subheading">Browse our booklets with valuable information on health, education, and awareness.</p>
 
-                <div class="vf-engagement-grid">
-                    <div class="vf-engagement-card">
-                        <h3>Capacity Building & Institutional Strengthening</h3>
-                        <p>Training and up-skilling of elected representatives, municipal and panchayat officials,
-                            school administrators, community leaders, and other local stakeholders.</p>
+                <div class="vp-grid">
+
+                    <div class="vp-card" style="background-image: url('images/Amiti Kainhki.jpg');"
+                        onclick="openImageModal('images/Amiti Kainhki.jpg')" data-image="images/Amiti Kainhki.jpg">
+                        <a href="#" class="vp-btn" onclick="event.stopPropagation();">Read More</a>
                     </div>
 
-                    <div class="vf-engagement-card">
-                        <h3>Education, NEP Implementation & Community Learning</h3>
-                        <p>Joint initiatives to support National Education Policy (NEP) implementation, teacher
-                            development, school–community linkages, and learning outcomes enhancement.</p>
+                    <div class="vp-card" style="background-image: url('images/MANTHAN COVER.jpg.jpg');"
+                        onclick="openImageModal('images/MANTHAN COVER.jpg.jpg')"
+                        data-image="images/MANTHAN COVER.jpg.jpg">
+                        <a href="https://drive.google.com/file/d/1h4uXmrC4vXiOUgyveEalrvXZEGgsm3yj/view?usp=sharing"
+                            target="_blank" class="vp-btn" onclick="event.stopPropagation();">Read More</a>
                     </div>
 
-                    <div class="vf-engagement-card">
-                        <h3>Inclusive Governance, Legal Aid & Social Justice</h3>
-                        <p>Projects to advance inclusive participation, access to entitlements, legal aid clinics,
-                            advocacy for marginalised groups (women, the elderly, differently-abled), and mechanisms for
-                            citizen engagement.</p>
-                    </div>
-
-                    <div class="vf-engagement-card">
-                        <h3>Livelihoods, MSME & Agrarian Resilience</h3>
-                        <p>Programs to strengthen local livelihoods, support MSME incubation, farmer resilience
-                            (including climate-sensitive practices), market linkages, and enterprise development.</p>
-                    </div>
-
-                    <div class="vf-engagement-card">
-                        <h3>Sustainable Urban & Rural Development, Environment & Disaster Resilience</h3>
-                        <p>Joint work on climate-responsive planning, renewable energy adoption, waste & water
-                            management, urban poverty alleviation, and disaster preparedness/response at local levels.
-                        </p>
-                    </div>
-
-                    <div class="vf-engagement-card">
-                        <h3>Technology, Digital Governance & Future Skills</h3>
-                        <p>Collaboration on digital transformation of local services, e-governance, community digital
-                            literacy, skilling in future-oriented technologies (as applicable), and technology
-                            demonstrations.</p>
-                    </div>
                 </div>
             </section>
         </div>
@@ -1773,56 +1833,6 @@ transition: transform 0.3s;
     </footer>
 
     </div>
-    <script>
-        // Mobile dropdown toggle functionality
-        // Add this to your existing JavaScript
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Handle mobile dropdown clicks
-            const mobileDropdowns = document.querySelectorAll('.vf-nav-menu .has-dropdown > a');
-
-            mobileDropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', function (e) {
-                    // Only prevent default on mobile
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        const parentLi = this.parentElement;
-                        const isActive = parentLi.classList.contains('active');
-                        // Close all other dropdowns
-                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                            if (item !== parentLi) {
-                                item.classList.remove('active');
-                            }
-                        });
-
-                        // Toggle current dropdown
-                        if (isActive) {
-                            parentLi.classList.remove('active');
-                        } else {
-                            parentLi.classList.add('active');
-                        }
-                    }
-                });
-            });
-
-            // Close dropdowns when clicking submenu items
-            const submenuLinks = document.querySelectorAll('.vf-submenu a');
-            submenuLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    // Close the mobile menu after clicking submenu item
-                    if (window.innerWidth <= 768) {
-                        const navContainer = document.getElementById('vfNavContainer'); const
-                            mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
-                                navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
-                            } // Close all dropdowns
-                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
-                            item.classList.remove('active');
-                        });
-                    }
-                });
-            });
-        });
-    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Tab switching
@@ -1927,6 +1937,56 @@ transition: transform 0.3s;
     <script src="js/aos.js"></script>
 
     <script src="js/main.js"></script>
+    <script>
+        // Mobile dropdown toggle functionality
+        // Add this to your existing JavaScript
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle mobile dropdown clicks
+            const mobileDropdowns = document.querySelectorAll('.vf-nav-menu .has-dropdown > a');
+
+            mobileDropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function (e) {
+                    // Only prevent default on mobile
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const parentLi = this.parentElement;
+                        const isActive = parentLi.classList.contains('active');
+                        // Close all other dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            if (item !== parentLi) {
+                                item.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current dropdown
+                        if (isActive) {
+                            parentLi.classList.remove('active');
+                        } else {
+                            parentLi.classList.add('active');
+                        }
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking submenu items
+            const submenuLinks = document.querySelectorAll('.vf-submenu a');
+            submenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Close the mobile menu after clicking submenu item
+                    if (window.innerWidth <= 768) {
+                        const navContainer = document.getElementById('vfNavContainer'); const
+                            mobileToggle = document.getElementById('vfMobileMenuToggle'); if (navContainer && mobileToggle) {
+                                navContainer.classList.remove('vf-active'); mobileToggle.textContent = '☰';
+                            } // Close all dropdowns
+                        document.querySelectorAll('.vf-nav-menu .has-dropdown').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
     <script>
         // Mobile menu toggle - Vasistha Foundation Header
         const vfMobileMenuToggle = document.getElementById('vfMobileMenuToggle');
@@ -2189,6 +2249,34 @@ transition: transform 0.3s;
                 // Optional: Add controls for debugging
                 window.vfRocketAnimation = rocketAnimation;
             }, 500);
+        });
+    </script>
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="modal-close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content-img" id="modalImage">
+    </div>
+
+    <script>
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Enable scrolling
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeImageModal();
+            }
         });
     </script>
 </body>

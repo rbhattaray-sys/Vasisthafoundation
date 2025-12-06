@@ -446,10 +446,6 @@ transition: transform 0.3s;
                 padding: 10px;
             }
 
-            .vf-top-right {
-                display: none !important;
-            }
-
             .vf-contact-info {
                 display: inline-block !important;
 
@@ -1067,11 +1063,6 @@ transition: transform 0.3s;
                 /*flex-wrap: nowrap ;*/
                 gap: 15px;
                 padding: 10px;
-            }
-
-            .vf-top-right {
-
-                display: none !important;
             }
 
             .vf-contact-info {
@@ -2112,9 +2103,9 @@ transition: transform 0.3s;
                                 Prakashan<span class="vf-icon-dropdown"></a>
                             <ul class="vf-submenu">
                                 <li><a href="books.html">Books</a></li>
-                                <li><a href="vasistha-prakashan.html">News letter</a></li>
-                                <li><a href="vasistha-prakashan.html">Booklet</a></li>
-                                <li><a href="vasistha-prakashan.html">Brochure</a></li>
+                                <li><a href="newsletter.html">News letter</a></li>
+                                <li><a href="booklet.html">Booklet</a></li>
+                                <li><a href="brochure.html">Brochure</a></li>
                             </ul>
                         </li>
                         <li><a href="gallery.html">Gallery</a></li>
@@ -2311,81 +2302,48 @@ transition: transform 0.3s;
 
 
 
-    <div class="zyx-slider-container-main">
-
-        <div class="zyx-image-carousel-wrapper">
-            <div class="row mb-5 align-items-st">
-                <div class="col-md-4">
-                    <div class="heading-20219">
-                        <h2 class="title text-cursive">Memorandums of Understanding</h2>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <p>At Vasistha Foundation & Educational Trust, we believe that meaningful change begins with
-                        meaningful collaboration. Our
-                        Memorandums of Understanding with esteemed institutions like Utkal University, AIILSG, and
-                        Utkalitaa represent
-                        strategic partnerships aimed at expanding impact across education, health, sustainable
-                        development, and community
-                        empowerment. These alliances strengthen our initiatives, foster knowledge sharing, and enable us
-                        to deliver long-lasting
-                        value to the communities we serve.</p>
+        <div class="container mb-5">
+        <div class="row mb-5 align-items-center">
+            <div class="col-md-4">
+                <div class="heading-20219">
+                    <h2 class="title text-cursive">Memorandums of Understanding</h2>
                 </div>
             </div>
-            <div class="zyx-slides-track-container" id="zyxSlidesTrack">
-
-                <!-- Slide 1 (formerly Slide 2) -->
-                <div class="zyx-slide-item-box">
-                    <div class="zyx-slide-content-grid">
-                        <!-- Card 1: AIILSG -->
-                        <div class="zyx-image-card-element" onclick="openImageModal('images/MoU_with_AIILSG.jpg')">
-                            <div class="zyx-card-image-holder"
-                                style="background-image: url('images/MoU_with_AIILSG.jpg');">
-                                <div class="zyx-card-overlay-text">
-                                    <div class="zyx-card-title-text">Utkal University</div>
-                                    <!-- <div class="zyx-card-subtitle-text">Support</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 2: UU -->
-                        <div class="zyx-image-card-element" onclick="openImageModal('images/MoU_with_UU.jpg')">
-                            <div class="zyx-card-image-holder" style="background-image: url('images/MoU_with_UU.jpg');">
-                                <div class="zyx-card-overlay-text">
-                                    <div class="zyx-card-title-text">Utkal University</div>
-                                    <!-- <div class="zyx-card-subtitle-text">Support</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3: AIILSG -->
-                        <div class="zyx-image-card-element" onclick="openImageModal('images/MoU_with_AIILSG.jpg')">
-                            <div class="zyx-card-image-holder"
-                                style="background-image: url('images/MoU_with_AIILSG.jpg');">
-                                <div class="zyx-card-overlay-text">
-                                    <div class="zyx-card-title-text">Utkal University</div>
-                                    <!-- <div class="zyx-card-subtitle-text">Support</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 4: UU -->
-                        <div class="zyx-image-card-element" onclick="openImageModal('images/MoU_with_UU.jpg')">
-                            <div class="zyx-card-image-holder" style="background-image: url('images/MoU_with_UU.jpg');">
-                                <div class="zyx-card-overlay-text">
-                                    <div class="zyx-card-title-text">Utkal University</div>
-                                    <!-- <div class="zyx-card-subtitle-text">Support</div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="col-md-8">
+                <p>At Vasistha Foundation & Educational Trust, we believe that meaningful change begins with
+                    meaningful collaboration. Our
+                    Memorandums of Understanding with esteemed institutions like Utkal University, AIILSG, and
+                    Utkalitaa represent
+                    strategic partnerships aimed at expanding impact across education, health, sustainable
+                    development, and community
+                    empowerment. These alliances strengthen our initiatives, foster knowledge sharing, and enable us
+                    to deliver long-lasting
+                    value to the communities we serve.</p>
             </div>
-
-            <button class="zyx-navigation-controls zyx-prev-button-ctrl" onclick="zyxPrevSlide()">❮</button>
-            <button class="zyx-navigation-controls zyx-next-button-ctrl" onclick="zyxNextSlide()">❯</button>
         </div>
 
-        <div class="zyx-indicator-dots-panel">
-            <button class="zyx-dot-indicator-btn zyx-active-dot" onclick="zyxCurrentSlide(1)"></button>
+        <div class="row justify-content-center">
+            <!-- Card 1: AIILSG -->
+            <div class="col-md-5 mb-4">
+                <div class="zyx-image-card-element" onclick="openImageModal('images/MoU_with_AIILSG.jpg')" style="cursor: pointer;">
+                    <div class="zyx-card-image-holder"
+                        style="background-image: url('images/MoU_with_AIILSG.jpg'); height: 300px; background-size: cover; background-position: center; border-radius: 10px;">
+                        <div class="zyx-card-overlay-text">
+                            <div class="zyx-card-title-text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: UU -->
+            <div class="col-md-5 mb-4">
+                <div class="zyx-image-card-element" onclick="openImageModal('images/MoU_with_UU.jpg')" style="cursor: pointer;">
+                    <div class="zyx-card-image-holder" style="background-image: url('images/MoU_with_UU.jpg'); height: 300px; background-size: cover; background-position: center; border-radius: 10px;">
+                        <div class="zyx-card-overlay-text">
+                            <div class="zyx-card-title-text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -2452,337 +2410,7 @@ transition: transform 0.3s;
     </footer>
 
     </div>
-    <script>
-        let zyxSlideIndex = 1;
-        const zyxTotalSlides = 3;
-        let zyxIsMobile = window.innerWidth <= 768;
-        let zyxMobileTotalSlides = 12; // 3 slides × 4 cards each
-        let zyxMobileSlideIndex = 1;
-
-        function zyxCheckMobile() {
-            const wasMobile = zyxIsMobile;
-            zyxIsMobile = window.innerWidth <= 768;
-
-            if (wasMobile !== zyxIsMobile) {
-                zyxCreateMobileSlides();
-                if (zyxIsMobile) {
-                    zyxMobileSlideIndex = 1;
-                    zyxShowMobileSlide(1);
-                } else {
-                    zyxSlideIndex = 1;
-                    zyxShowSlide(1);
-                }
-            }
-        }
-
-        function zyxCreateMobileSlides() {
-            const zyxTrack = document.getElementById('zyxSlidesTrack');
-
-            if (zyxIsMobile) {
-                // Create individual card slides for mobile
-                const allCards = document.querySelectorAll('.zyx-image-card-element');
-                const cardData = [];
-
-                allCards.forEach(card => {
-                    const img = card.querySelector('.zyx-card-image-holder');
-                    const title = card.querySelector('.zyx-card-title-text');
-                    const subtitle = card.querySelector('.zyx-card-subtitle-text');
-
-                    cardData.push({
-                        image: img.style.backgroundImage,
-                        title: title.textContent,
-                        subtitle: subtitle.textContent
-                    });
-                });
-
-                zyxTrack.innerHTML = '';
-
-                cardData.forEach(card => {
-                    const slide = document.createElement('div');
-                    slide.className = 'zyx-mobile-slide';
-                    slide.innerHTML = `
-                            <div class="zyx-image-card-element">
-                                <div class="zyx-card-image-holder" style="background-image: ${card.image};">
-                                    <div class="zyx-card-overlay-text">
-                                        <div class="zyx-card-title-text">${card.title}</div>
-                                        <div class="zyx-card-subtitle-text">${card.subtitle}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                    zyxTrack.appendChild(slide);
-                });
-
-                zyxUpdateMobileDots();
-            } else {
-                // Restore original desktop slides
-                zyxTrack.innerHTML = `
-                        <div class="zyx-slide-item-box">
-                            <div class="zyx-slide-content-grid">
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">COVID-19</div>
-                                            <div class="zyx-card-subtitle-text">Hygiene Drive</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1569163139851-de9f3522efea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Environmental</div>
-                                            <div class="zyx-card-subtitle-text">Awareness</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Parent-Student</div>
-                                            <div class="zyx-card-subtitle-text">Sessions</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Education</div>
-                                            <div class="zyx-card-subtitle-text">Support</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="zyx-slide-item-box">
-                            <div class="zyx-slide-content-grid">
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Community</div>
-                                            <div class="zyx-card-subtitle-text">Outreach</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Health</div>
-                                            <div class="zyx-card-subtitle-text">Checkups</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1509909756405-be0199881695?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Skills</div>
-                                            <div class="zyx-card-subtitle-text">Training</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Technology</div>
-                                            <div class="zyx-card-subtitle-text">Access</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="zyx-slide-item-box">
-                            <div class="zyx-slide-content-grid">
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Reading</div>
-                                            <div class="zyx-card-subtitle-text">Programs</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Creative</div>
-                                            <div class="zyx-card-subtitle-text">Arts</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Sports</div>
-                                            <div class="zyx-card-subtitle-text">Activities</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="zyx-image-card-element">
-                                    <div class="zyx-card-image-holder" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
-                                        <div class="zyx-card-overlay-text">
-                                            <div class="zyx-card-title-text">Nutrition</div>
-                                            <div class="zyx-card-subtitle-text">Programs</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                zyxUpdateDesktopDots();
-            }
-        }
-
-        function zyxUpdateMobileDots() {
-            const dotsPanel = document.querySelector('.zyx-indicator-dots-panel');
-            dotsPanel.innerHTML = '';
-
-            for (let i = 1; i <= zyxMobileTotalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = 'zyx-dot-indicator-btn';
-                if (i === 1) dot.classList.add('zyx-active-dot');
-                dot.onclick = () => zyxCurrentMobileSlide(i);
-                dotsPanel.appendChild(dot);
-            }
-        }
-
-        function zyxUpdateDesktopDots() {
-            const dotsPanel = document.querySelector('.zyx-indicator-dots-panel');
-            dotsPanel.innerHTML = '';
-
-            for (let i = 1; i <= zyxTotalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = 'zyx-dot-indicator-btn';
-                if (i === 1) dot.classList.add('zyx-active-dot');
-                dot.onclick = () => zyxCurrentSlide(i);
-                dotsPanel.appendChild(dot);
-            }
-        }
-
-        function zyxShowSlide(n) {
-            const zyxTrack = document.getElementById('zyxSlidesTrack');
-            const zyxDots = document.querySelectorAll('.zyx-dot-indicator-btn');
-
-            if (n > zyxTotalSlides) {
-                zyxSlideIndex = 1;
-            }
-            if (n < 1) {
-                zyxSlideIndex = zyxTotalSlides;
-            }
-
-            zyxTrack.style.transform = `translateX(-${(zyxSlideIndex - 1) * 100}%)`;
-
-            zyxDots.forEach(dot => dot.classList.remove('zyx-active-dot'));
-            if (zyxDots[zyxSlideIndex - 1]) {
-                zyxDots[zyxSlideIndex - 1].classList.add('zyx-active-dot');
-            }
-        }
-
-        function zyxShowMobileSlide(n) {
-            const zyxTrack = document.getElementById('zyxSlidesTrack');
-            const zyxDots = document.querySelectorAll('.zyx-dot-indicator-btn');
-
-            if (n > zyxMobileTotalSlides) {
-                zyxMobileSlideIndex = 1;
-            }
-            if (n < 1) {
-                zyxMobileSlideIndex = zyxMobileTotalSlides;
-            }
-
-            zyxTrack.style.transform = `translateX(-${(zyxMobileSlideIndex - 1) * 100}%)`;
-
-            zyxDots.forEach(dot => dot.classList.remove('zyx-active-dot'));
-            if (zyxDots[zyxMobileSlideIndex - 1]) {
-                zyxDots[zyxMobileSlideIndex - 1].classList.add('zyx-active-dot');
-            }
-        }
-
-        function zyxPrevSlide() {
-            if (zyxIsMobile) {
-                zyxMobileSlideIndex--;
-                zyxShowMobileSlide(zyxMobileSlideIndex);
-            } else {
-                zyxSlideIndex--;
-                zyxShowSlide(zyxSlideIndex);
-            }
-        }
-
-        function zyxNextSlide() {
-            if (zyxIsMobile) {
-                zyxMobileSlideIndex++;
-                zyxShowMobileSlide(zyxMobileSlideIndex);
-            } else {
-                zyxSlideIndex++;
-                zyxShowSlide(zyxSlideIndex);
-            }
-        }
-
-        function zyxCurrentSlide(n) {
-            zyxSlideIndex = n;
-            zyxShowSlide(zyxSlideIndex);
-        }
-
-        function zyxCurrentMobileSlide(n) {
-            zyxMobileSlideIndex = n;
-            zyxShowMobileSlide(zyxMobileSlideIndex);
-        }
-
-        // Auto-slide functionality
-        let zyxAutoSlideInterval = setInterval(() => {
-            zyxNextSlide();
-        }, 5000);
-
-        // Pause auto-slide on hover
-        const zyxSliderContainer = document.querySelector('.zyx-image-carousel-wrapper');
-        zyxSliderContainer.addEventListener('mouseenter', () => {
-            clearInterval(zyxAutoSlideInterval);
-        });
-
-        zyxSliderContainer.addEventListener('mouseleave', () => {
-            zyxAutoSlideInterval = setInterval(() => {
-                zyxNextSlide();
-            }, 5000);
-        });
-
-        // Touch/swipe functionality for mobile
-        let zyxTouchStartX = 0;
-        let zyxTouchEndX = 0;
-
-        zyxSliderContainer.addEventListener('touchstart', (e) => {
-            zyxTouchStartX = e.changedTouches[0].screenX;
-        });
-
-        zyxSliderContainer.addEventListener('touchend', (e) => {
-            zyxTouchEndX = e.changedTouches[0].screenX;
-            zyxHandleSwipe();
-        });
-
-        function zyxHandleSwipe() {
-            if (zyxTouchEndX < zyxTouchStartX - 50) {
-                zyxNextSlide();
-            }
-            if (zyxTouchEndX > zyxTouchStartX + 50) {
-                zyxPrevSlide();
-            }
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                zyxPrevSlide();
-            } else if (e.key === 'ArrowRight') {
-                zyxNextSlide();
-            }
-        });
-
-        // Window resize handler
-        window.addEventListener('resize', zyxCheckMobile);
-
-        // Initialize
-        zyxCheckMobile();
-        if (zyxIsMobile) {
-            zyxShowMobileSlide(zyxMobileSlideIndex);
-        } else {
-            zyxShowSlide(zyxSlideIndex);
-        }
-    </script>
+    
     <script>
         // Tab functionality
         const vasisthaTabs = document.querySelectorAll('.vasistha-tab-btn');
