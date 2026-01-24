@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fundraiser &mdash; Website Template by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .site-section {
+      padding: 2rem !important;
+    }
+
+    /* Fix dropdown visibility */
+    .vf-nav-container {
+      overflow: visible !important;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .vf-nav-menu .has-dropdown {
+      position: relative;
+    }
+
+    .vf-submenu {
+      position: absolute;
+      /* place immediately touching the parent so there's no mouse-gap */
+      top: calc(100% - 1px);
+      left: 0;
+      display: none;
+      flex-direction: column;
+      background-color: #746175;
+      border-radius: 10px;
+      padding: 0;
+      min-width: 200px;
+      z-index: 9999;
+      /* ensure the submenu can receive pointer events */
+      pointer-events: auto;
+    }
+
+    .vf-submenu li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .vf-submenu li:last-child {
+      border-bottom: none;
+    }
+
+    .vf-submenu li a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      white-space: nowrap;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .vf-submenu li a:hover {
+      background-color: white;
+      color: #2c5530;
+    }
+
+    /* Show dropdown on hover or when focused (keyboard/tab) */
+    .vf-nav-menu .has-dropdown:hover .vf-submenu,
+    .vf-nav-menu .has-dropdown:focus-within .vf-submenu {
+      display: block;
+    }
+
+
+
+
+
+
+
+    @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+    body {
+      font-family: Lato, sans-serif;
+    }
+
+    @media (min-width: 1000px) {
+      .jl1 {
+        margin-left: 200px !important;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .llo {
+        height: 50px !important;
+      }
+
+      .ftco-cover-1,
+      .ftco-cover-1 .container>.row {
+        height: 50vh !important;
+        min-height: 300px !important;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .carousel-wrapper-xyz {
+
+        margin-top: -350px !important;
+        z-index: 2;
+        margin-left: 200px;
+      }
+
+      .owl-1 .owl-dots,
+      .owl-3 .owl-dots Specificity: (0, 2, 0) {
+        bottom: 30px !important;
+        position: relative;
+      }
+
+      /* Mobile Menu Fixes - Add this to your existing CSS */
+    }
+
+    @media (max-width: 500px) {
+
+      /* Make nav container scrollable */
+      .owl-carousel-wrapper {
+        height: 80vh;
+
+
+      }
+
+      .llo {
+        height: 50px !important;
+      }
+
+      .vf-nav-container {
+        max-height: 70vh;
+        /* Limit height to 70% of viewport */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        overflow-x: hidden;
+        /* Hide horizontal overflow */
+      }
+
+      /* Fix dropdown positioning in mobile */
+      .vf-nav-menu .has-dropdown {
+        position: relative;
+      }
+
+      .vf-submenu {
+        position: static !important;
+        /* Change from absolute to static */
+        display: none;
+        background-color: rgba(116, 97, 117, 0.9) !important;
+        border-radius: 10px;
+        margin: 5px 0 5px 15px;
+        /* Add left margin for indentation */
+        min-width: auto;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Show submenu when parent is clicked/hovered */
+      .vf-nav-menu .has-dropdown:hover .vf-submenu,
+      .vf-nav-menu .has-dropdown.active .vf-submenu {
+        display: block;
+      }
+
+      /* Style submenu items */
+      .vf-submenu li a {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 8px;
+        margin: 2px 5px;
+      }
+
+
+
+      .vf-nav-menu .has-dropdown.active>a::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+    @media (max-width: 1024px) {
+      .carousel-wrapper-xyz {
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .services-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 10px;
+        gap: 15px;
+      }
+
+      .site-section .row.align-items-stretch {
+        flex-direction: column;
+      }
+
+      .shape3 {
+        margin-top: -80px !important;
+      }
+
+      .shape2 {
+        margin-top: -30px !important;
+      }
+
+      h1 {
+        font-size: 2.5rem !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem !important;
+      }
+    }
+
+    .site-footer {
+      padding: 8em 0 0 0 !important;
+      background-color: #8e728fde !important;
+    }
+
+    .vf-footer {
+      width: 100vw;
+      /* position: fixed; */
+
+    }
+
+    .vf-footer div {
+      background-color: #676678;
+      margin: -5px 0px 0px 0px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    svg {
+      width: 100%;
+    }
+
+    .vf-arrow {
+      stroke-width: 0.3px;
+      stroke: #676678;
+    }
+
+    .vf-topball {
+      animation: vf-ball 1.5s ease-in-out infinite alternate;
+      animation-delay: 0.3s;
+      cursor: pointer;
+    }
+
+    .vf-wave {
+      animation: vf-wave 3s linear infinite;
+      fill: #746175;
+    }
+
+    .vf-drop {
+      fill: transparent;
+      animation: vf-drop 5s ease infinite normal;
+      stroke: #676678;
+      stroke-width: 0.5;
+      opacity: 0.6;
+      transform: translateY(80%);
+    }
+
+    .vf-drop1 {
+      transform-origin: 20px 3px;
+    }
+
+    .vf-drop2 {
+      animation-delay: 3s;
+      animation-duration: 3s;
+      transform-origin: 25px 3px;
+    }
+
+    .vf-drop3 {
+      animation-delay: -2s;
+      animation-duration: 3.4s;
+      transform-origin: 16px 3px;
+    }
+
+    .vf-gooeff {
+      filter: url(#vf-goo);
+    }
+
+    #vf-wave2 {
+      animation-duration: 5s;
+      animation-direction: reverse;
+      opacity: 0.6;
+    }
+
+    #vf-wave3 {
+      animation-duration: 7s;
+      opacity: 0.3;
+    }
+
+    @keyframes vf-drop {
+      0% {
+        transform: translateY(80%);
+        opacity: 0.6;
+    }
